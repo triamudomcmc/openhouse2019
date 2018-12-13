@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import React from 'react'
 import { ParallaxLayer } from 'react-spring/dist/addons.cjs'
+import { beat, fontSize, Fonts, ViewType } from '../components/design'
 
 const Header = styled.div`
   position: absolute;
@@ -8,6 +9,14 @@ const Header = styled.div`
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
+  padding-bottom: ${beat(1)};
+  font-size: ${fontSize(1)};
+  ${ViewType.mobile} {
+    font-size: ${fontSize(-1)};
+  }
+  ${ViewType.xsMobile} {
+    font-size: ${fontSize(-1)};
+  }
 `
 
 export const Title = React.memo(() => (

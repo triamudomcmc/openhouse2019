@@ -61,6 +61,12 @@ export function fontSize(n) {
 /**
  * Tracking (letter-spacing).
  */
+
+export const Fonts = {
+  display: ['Montserrat', ...getSystemFonts()].join(', '),
+  body: ['Noto Sans', 'Noto Sans Thai UI', ...getSystemFonts()].join(', ')
+}
+
 export const Tracking = {
   tight: '-0.05em',
   normal: '0',
@@ -69,7 +75,9 @@ export const Tracking = {
 }
 
 export const TypographicContext = styled.div`
-  font-size: 1rem;
+  font-family: ${Fonts.body};
+  font-weight: 600;
+  font-size: 1.2rem;
   > p,
   > blockquote,
   > ul,
@@ -127,7 +135,25 @@ export const ViewType = {
     1}px) and (max-width: ${TABLET_BREAKPOINT}px)`
 }
 
+const BASE_FONT_SIZE = '16px'
+const BASE_FONT_SIZE_XS = '14px'
+
 export const GlobalStyle = createGlobalStyle`
-    ${getFontFace()}  
+${getFontFace()}
+body {
+  font-size: ${BASE_FONT_SIZE};
+  margin: 0;
+  padding: 0;
+  ${ViewType.mobile} {
+    font-size: ${BASE_FONT_SIZE_XS}
+  }
+  canvas {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
 }
 `
