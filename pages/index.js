@@ -4,9 +4,12 @@ import React from 'react'
 import { beat, fontSize, Tracking } from '../components/design'
 import { GlobalStyle } from '../components/design'
 import { Parallax, ParallaxLayer } from 'react-spring/dist/addons.cjs'
+import { ScreenBadge } from 'react-awesome-styled-grid'
+import { GA_TRACKING_ID } from '../lib/gtag'
 
 import { Title } from '../components/title'
 import { Clubs } from '../components/clubs'
+import { Info } from '../components/info'
 
 const ScrollWrapper = styled.div`
   width: 1;
@@ -30,6 +33,20 @@ const Scroll = React.memo(() => (
 export default () => (
   <React.Fragment>
     <Head>
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}');
+          `
+        }}
+      />
       <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
       <meta
         name="viewport"
@@ -63,17 +80,15 @@ export default () => (
       <link rel="shortcut icon" href="/static/favicons/favicon.ico" />
       <meta name="theme-color" color="#ffffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:300,600,700|Kanit:400"
-        rel="stylesheet"
-      />
       <title>Triam Udom Open House</title>
     </Head>
     <GlobalStyle />
-    <Parallax pages={2}>
+    <Parallax pages={3}>
       <Title />
       <Scroll />
+      <Info />
       <Clubs />
+      <ScreenBadge />
     </Parallax>
   </React.Fragment>
 )
