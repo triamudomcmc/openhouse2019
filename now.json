@@ -3,7 +3,8 @@
   "builds": [
     {
       "src": "next.config.js",
-      "use": "@now/next"
+      "use": "@now/static-build"
     }
-  ]
+  ],
+  "alias": ["ophbeta.iammark.me"]
 }
