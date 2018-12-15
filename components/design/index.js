@@ -77,7 +77,7 @@ export const Tracking = {
 export const TypographicContext = styled.div`
   font-family: ${Fonts.body};
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
   > p,
   > blockquote,
   > ul,
@@ -109,6 +109,11 @@ function getFontFace() {
   )}
 
     ${generateFontFace('/static/fonts/NotoSans-SemiBold.ttf', 'Noto Sans', 600)}
+    ${generateFontFace(
+      '/static/fonts/NotoSansDisplay-Black.ttf',
+      'Noto Sans Display',
+      800
+    )}
     ${generateFontFace(
       '/static/fonts/NotoSansThaiUI-Light.ttf',
       'Noto Sans Thai UI',
