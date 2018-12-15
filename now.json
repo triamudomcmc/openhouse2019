@@ -6,8 +6,5 @@
       "use": "@now/static-build"
     }
   ],
-  "alias": ["ophbeta.iammark.me"],
-  "env": {
-    "NODE_ENV": "PRODUCTION"
-  }
+  "alias": ["ophbeta.iammark.me"]
 }
