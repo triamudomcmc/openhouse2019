@@ -12,6 +12,7 @@ import { MOBILE } from '../components/design/withViewType'
 
 import { Title } from '../components/title'
 import { Booth } from '../components/booth'
+import { Register } from '../components/register'
 
 const ScrollWrapper = styled.div`
   width: 1;
@@ -114,6 +115,7 @@ class Index extends React.PureComponent {
           <Scroll />
           <StarBg />
           <Booth viewType={viewType} />
+          <Register viewType={viewType} />
           <ScreenBadge />
         </Parallax>
       </React.Fragment>
