@@ -110,7 +110,7 @@ class Index extends React.PureComponent {
           <title>Triam Udom Open House</title>
         </Head>
         <GlobalStyle />
-        <Parallax pages={this.props.viewType === MOBILE ? 6 : 3}>
+        <Parallax pages={this.props.viewType === MOBILE ? 5 : 3}>
           <Title />
           <Scroll />
           <StarBg />
