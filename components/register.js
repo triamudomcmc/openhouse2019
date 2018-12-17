@@ -67,8 +67,8 @@ export class Register extends React.PureComponent {
   render() {
     return (
       <ParallaxLayer
-        offset={this.props.viewType === MOBILE ? 4 : 2}
-        factor={1}
+        offset={this.props.viewType === MOBILE ? 5 : 2}
+        factor={this.props.viewType === MOBILE ? 1.5 : 1}
         speed={0.5}
       >
         <Parent>

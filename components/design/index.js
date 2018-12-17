@@ -140,8 +140,8 @@ export const ViewType = {
     1}px) and (max-width: ${TABLET_BREAKPOINT}px)`
 }
 
-const BASE_FONT_SIZE = '16px'
-const BASE_FONT_SIZE_XS = '14px'
+const BASE_FONT_SIZE = '14px'
+const BASE_FONT_SIZE_XS = '12px'
 
 export const GlobalStyle = createGlobalStyle`
 ${getFontFace()}
