@@ -45,7 +45,7 @@ export class Register extends React.PureComponent {
   state = {
     key: ''
   }
-  submitToFirebase = async values => {
+  submitToFirebase = async (values, resetForm) => {
     try {
       const res = await axios.post(
         ' https://asia-northeast1-triamudomopenhouse2019.cloudfunctions.net/registration/register ',
@@ -59,6 +59,7 @@ export class Register extends React.PureComponent {
         }
       )
       this.setState({ key: res.data })
+      resetForm({})
     } catch (err) {
       console.error(err)
     }
@@ -67,7 +68,7 @@ export class Register extends React.PureComponent {
     return (
       <ParallaxLayer
         offset={this.props.viewType === MOBILE ? 4 : 2}
-        factor={this.props.viewType === MOBILE ? 2 : 1}
+        factor={1}
         speed={0.5}
       >
         <Parent>
@@ -83,8 +84,8 @@ export class Register extends React.PureComponent {
                 stdyear: ' '
               }}
               validationSchema={SignupSchema}
-              onSubmit={(values, { setSubmitting }) => {
-                this.submitToFirebase(values)
+              onSubmit={(values, { resetForm }) => {
+                this.submitToFirebase(values, resetForm)
               }}
             >
               {({
@@ -143,7 +144,7 @@ export class Register extends React.PureComponent {
                         errors.name && touched.name ? 'input is-error' : 'input'
                       }
                       onChange={handleChange}
-                      value={values.name}
+                      value={values.name || ''}
                     />
                     <br />
                     <label htmlFor="lastname">Lastname</label>
@@ -155,7 +156,7 @@ export class Register extends React.PureComponent {
                           : 'input'
                       }
                       onChange={handleChange}
-                      value={values.lastname}
+                      value={values.lastname || ''}
                     />
                     <br />
                     <label htmlFor="email">Email</label>
@@ -167,7 +168,7 @@ export class Register extends React.PureComponent {
                           : 'input'
                       }
                       onChange={handleChange}
-                      value={values.email}
+                      value={values.email || ''}
                     />
                     <br />
                     <label>
@@ -218,7 +219,7 @@ export class Register extends React.PureComponent {
                               : 'input'
                           }
                           onChange={handleChange}
-                          value={values.stdyear}
+                          value={values.stdyear || ''}
                         />
                       </div>
                     )}
