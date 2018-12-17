@@ -71,7 +71,7 @@ export class Register extends React.PureComponent {
     return (
       <ParallaxLayer
         offset={this.props.viewType === MOBILE ? 4 : 2}
-        factor={1}
+        factor={this.props.viewType === MOBILE ? 2 : 1}
         speed={0.5}
       >
         <Parent>
@@ -79,11 +79,11 @@ export class Register extends React.PureComponent {
             <h1 className="title">Register</h1>
             <Formik
               initialValues={{
-                prefix: '',
+                prefix: 'mister',
                 name: '',
                 lastname: '',
                 email: '',
-                type: '',
+                type: 'student',
                 stdyear: ''
               }}
               validationSchema={SignupSchema}
@@ -102,17 +102,43 @@ export class Register extends React.PureComponent {
               }) => (
                 <div className="field">
                   <form onSubmit={handleSubmit}>
-                    <label for="prefix">Prefix</label>
-                    <input
-                      name="prefix"
-                      className={
-                        errors.prefix && touched.prefix
-                          ? 'input is-error'
-                          : 'input'
-                      }
-                      onChange={handleChange}
-                      value={values.prefix}
-                    />
+                    <label for="prefix">Prefix</label> <br />
+                    <label>
+                      <input
+                        name="prefix"
+                        type="radio"
+                        value="mister"
+                        checked={values.prefix === 'mister'}
+                        onChange={handleChange}
+                        className="radio"
+                        onBlur={handleBlur}
+                      />
+                      <span>Mister</span>
+                    </label>{' '}
+                    <label>
+                      <input
+                        name="prefix"
+                        type="radio"
+                        value="miss"
+                        checked={values.prefix === 'miss'}
+                        onChange={handleChange}
+                        className="radio"
+                        onBlur={handleBlur}
+                      />
+                      <span>Miss</span>
+                    </label>{' '}
+                    <label>
+                      <input
+                        name="prefix"
+                        type="radio"
+                        value="mrs"
+                        checked={values.prefix === 'mrs'}
+                        onChange={handleChange}
+                        className="radio"
+                        onBlur={handleBlur}
+                      />
+                      <span>Mrs</span>
+                    </label>
                     <br />
                     <label for="name">Name</label>
                     <input
@@ -148,27 +174,58 @@ export class Register extends React.PureComponent {
                       value={values.email}
                     />
                     <br />
-                    <label for="type">Type</label>
-                    <input
-                      name="type"
-                      className={
-                        errors.type && touched.type ? 'input is-error' : 'input'
-                      }
-                      onChange={handleChange}
-                      value={values.type}
-                    />
+                    <label>
+                      <input
+                        name="type"
+                        type="radio"
+                        value="student"
+                        checked={values.type === 'student'}
+                        onChange={handleChange}
+                        className="radio"
+                        onBlur={handleBlur}
+                      />
+                      <span>Student</span>
+                    </label>{' '}
+                    <label>
+                      <input
+                        name="type"
+                        type="radio"
+                        value="parent"
+                        checked={values.type === 'parent'}
+                        onChange={handleChange}
+                        className="radio"
+                        onBlur={handleBlur}
+                      />
+                      <span>Parent</span>
+                    </label>{' '}
+                    <label>
+                      <input
+                        name="type"
+                        type="radio"
+                        value="teacher"
+                        checked={values.type === 'teacher'}
+                        onChange={handleChange}
+                        className="radio"
+                        onBlur={handleBlur}
+                      />
+                      <span>Teacher</span>
+                    </label>
                     <br />
-                    <label for="stdyear">Student's Year</label>
-                    <input
-                      name="stdyear"
-                      className={
-                        errors.stdyear && touched.stdyear
-                          ? 'input is-error'
-                          : 'input'
-                      }
-                      onChange={handleChange}
-                      value={values.stdyear}
-                    />
+                    {values.type === 'student' && (
+                      <div>
+                        <label for="stdyear">Student's Year</label>
+                        <input
+                          name="stdyear"
+                          className={
+                            errors.stdyear && touched.stdyear
+                              ? 'input is-error'
+                              : 'input'
+                          }
+                          onChange={handleChange}
+                          value={values.stdyear}
+                        />
+                      </div>
+                    )}
                     <br />
                     <button
                       class="btn is-primary"
