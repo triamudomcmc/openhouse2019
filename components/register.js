@@ -38,10 +38,6 @@ const SignupSchema = Yup.object().shape({
   type: Yup.string()
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
-    .required('Required'),
-  stdyear: Yup.number()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
     .required('Required')
 })
 
@@ -84,7 +80,7 @@ export class Register extends React.PureComponent {
                 lastname: '',
                 email: '',
                 type: 'student',
-                stdyear: ''
+                stdyear: ' '
               }}
               validationSchema={SignupSchema}
               onSubmit={(values, { setSubmitting }) => {
@@ -102,7 +98,7 @@ export class Register extends React.PureComponent {
               }) => (
                 <div className="field">
                   <form onSubmit={handleSubmit}>
-                    <label for="prefix">Prefix</label> <br />
+                    <label htmlFor="prefix">Prefix</label> <br />
                     <label>
                       <input
                         name="prefix"
@@ -140,7 +136,7 @@ export class Register extends React.PureComponent {
                       <span>Mrs</span>
                     </label>
                     <br />
-                    <label for="name">Name</label>
+                    <label htmlFor="name">Name</label>
                     <input
                       name="name"
                       className={
@@ -150,7 +146,7 @@ export class Register extends React.PureComponent {
                       value={values.name}
                     />
                     <br />
-                    <label for="lastname">Lastname</label>
+                    <label htmlFor="lastname">Lastname</label>
                     <input
                       name="lastname"
                       className={
@@ -162,7 +158,7 @@ export class Register extends React.PureComponent {
                       value={values.lastname}
                     />
                     <br />
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input
                       name="email"
                       className={
@@ -213,7 +209,7 @@ export class Register extends React.PureComponent {
                     <br />
                     {values.type === 'student' && (
                       <div>
-                        <label for="stdyear">Student's Year</label>
+                        <label htmlFor="stdyear">Student's Year</label>
                         <input
                           name="stdyear"
                           className={
@@ -228,7 +224,7 @@ export class Register extends React.PureComponent {
                     )}
                     <br />
                     <button
-                      class="btn is-primary"
+                      className="btn is-primary"
                       type="submit"
                       disabled={isSubmitting}
                     >
@@ -238,7 +234,6 @@ export class Register extends React.PureComponent {
                 </div>
               )}
             </Formik>
-
             {this.state.key && <QRCode value={this.state.key} />}
           </div>
         </Parent>
