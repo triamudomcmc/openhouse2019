@@ -1,12 +1,16 @@
 {
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "axios": "^0.18.0",
+    "formik": "^1.4.1",
     "next": "^7.0.2",
+    "qrcode.react": "^0.8.0",
     "react": "^16.6.3",
     "react-awesome-styled-grid": "^2.2.2",
     "react-dom": "^16.6.3",
     "react-spring": "^6.1.10",
-    "styled-components": "^4.1.2"
+    "styled-components": "^4.1.2",
+    "yup": "^0.26.6"
   },
   "scripts": {
     "dev": "next",
