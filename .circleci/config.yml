@@ -1,0 +1,14 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1.1.0
+workflows:
+  build:
+    jobs:
+       - cypress/install:
+          build: yarn build
+      - cypress/run:
+          requires:
+            - cypress/install
+          start: yarn start
+          wait-on: 'http://localhost:3000'
+          record: true
