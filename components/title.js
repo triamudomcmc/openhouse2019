@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import React from 'react'
-import { ParallaxLayer } from 'react-spring/dist/addons.cjs'
-import { beat, fontSize, Fonts, ViewType } from '../components/design'
+import { ParallaxLayer } from 'react-spring/addons.cjs'
+import { Spring, config, animated } from 'react-spring'
+import { beat, fontSize, ViewType } from '../components/design'
 
 const Header = styled.div`
   position: absolute;
@@ -22,8 +23,19 @@ const Header = styled.div`
 export const Title = React.memo(() => (
   <ParallaxLayer offset={0} speed={0.5}>
     <Header>
-      <h1>Triam Udom Open House</h1>
-      <h1>2019</h1>
+      <Spring
+        native
+        from={{ opacity: 0 }}
+        to={{ opacity: 1 }}
+        config={config.molasses}
+      >
+        {props => (
+          <animated.div style={props}>
+            <h1>Triam Udom Open House</h1>
+            <h1>2019</h1>
+          </animated.div>
+        )}
+      </Spring>
     </Header>
   </ParallaxLayer>
 ))

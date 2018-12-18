@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 import Head from 'next/head'
 import React from 'react'
-import { beat, fontSize, Tracking } from '../components/design'
+import { beat, fontSize, Tracking, ViewType } from '../components/design'
 import { GlobalStyle } from '../components/design'
-import { Parallax, ParallaxLayer } from 'react-spring/dist/addons.cjs'
-import { ScreenBadge } from 'react-awesome-styled-grid'
+import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 import { GA_TRACKING_ID } from '../lib/gtag'
 
 import { enhance } from '../components/design/withViewType'
@@ -13,6 +12,9 @@ import { MOBILE } from '../components/design/withViewType'
 import { Title } from '../components/title'
 import { Booth } from '../components/booth'
 import { Register } from '../components/register'
+
+import '../static/css/nes.min.css'
+import '../static/css/index.css'
 
 const ScrollWrapper = styled.div`
   width: 1;
@@ -25,6 +27,10 @@ const ScrollWrapper = styled.div`
   width: 100%;
   letter-spacing: ${Tracking.wide};
   font-size: ${fontSize(-3)};
+
+  ${ViewType.mobile} {
+    font-size: ${fontSize(-7)};
+  }
 `
 
 const Scroll = React.memo(() => (
@@ -46,6 +52,7 @@ const StarBg = React.memo(() => (
 ))
 
 class Index extends React.PureComponent {
+  scroll = to => this.refs.parallax.scrollTo(to)
   render() {
     const { viewType } = this.props
     return (
@@ -64,10 +71,6 @@ class Index extends React.PureComponent {
             gtag('config', '${GA_TRACKING_ID}');
           `
             }}
-          />
-          <link
-            href="https://unpkg.com/nes.css/css/nes.min.css"
-            rel="stylesheet"
           />
           <meta
             name="viewport"
@@ -112,14 +115,14 @@ class Index extends React.PureComponent {
         <GlobalStyle />
         <Parallax
           pages={this.props.viewType === MOBILE ? 6.5 : 3}
-          config={{ tension: 280, friction: 120 }}
+          config={{ tension: 120, friction: 14 }}
+          ref="parallax"
         >
-          <Title />
+          <Title onClick={() => this.scroll(1)} />
           <Scroll />
           <StarBg />
           <Booth viewType={viewType} />
           <Register viewType={viewType} />
-          <ScreenBadge />
         </Parallax>
       </React.Fragment>
     )

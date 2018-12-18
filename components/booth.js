@@ -1,5 +1,5 @@
 import React from 'react'
-import { ParallaxLayer } from 'react-spring/dist/addons.cjs'
+import { ParallaxLayer } from 'react-spring/addons.cjs'
 import styled from 'styled-components'
 
 import { MOBILE } from './design/withViewType'

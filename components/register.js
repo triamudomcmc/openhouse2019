@@ -1,22 +1,21 @@
 import styled from 'styled-components'
 import React from 'react'
-import { ParallaxLayer } from 'react-spring/dist/addons.cjs'
+import { ParallaxLayer } from 'react-spring/addons.cjs'
 import axios from 'axios'
 import QRCode from 'qrcode.react'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
+import { TypographicContext } from './design'
 
-import { beat, fontSize, Fonts, ViewType } from '../components/design'
 import { MOBILE } from './design/withViewType'
 
 const Parent = styled.div`
-  padding: 0 2rem;
-  margin: 2rem;
-
-  ${ViewType.mobile} {
-    padding: 0;
-    margin: 0;
-  }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `
 
 const SignupSchema = Yup.object().shape({
@@ -72,7 +71,7 @@ export class Register extends React.PureComponent {
         speed={0.5}
       >
         <Parent>
-          <div className="container with-title">
+          <div className="container with-title is-light">
             <h1 className="title">Register</h1>
             <Formik
               initialValues={{
@@ -235,7 +234,14 @@ export class Register extends React.PureComponent {
                 </div>
               )}
             </Formik>
-            {this.state.key && <QRCode value={this.state.key} />}
+            {this.state.key && (
+              <div>
+                <TypographicContext>
+                  <h4 id="regtxt">โปรดเก็บ QR Code ไว้ยืนยันตัวตนหน้างาน</h4>
+                </TypographicContext>
+                <QRCode value={this.state.key} />
+              </div>
+            )}
           </div>
         </Parent>
       </ParallaxLayer>
