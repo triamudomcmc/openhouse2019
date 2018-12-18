@@ -73,173 +73,177 @@ export class Register extends React.PureComponent {
         <Parent>
           <div className="container with-title is-light">
             <h1 className="title">Register</h1>
-            <Formik
-              initialValues={{
-                prefix: 'mister',
-                name: '',
-                lastname: '',
-                email: '',
-                type: 'student',
-                stdyear: ' '
-              }}
-              validationSchema={SignupSchema}
-              onSubmit={(values, { resetForm }) => {
-                this.submitToFirebase(values, resetForm)
-              }}
-            >
-              {({
-                values,
-                errors,
-                touched,
-                handleChange,
-                handleBlur,
-                handleSubmit,
-                isSubmitting
-              }) => (
-                <div className="field">
-                  <form onSubmit={handleSubmit}>
-                    <label htmlFor="prefix">Prefix</label> <br />
-                    <label>
-                      <input
-                        name="prefix"
-                        type="radio"
-                        value="mister"
-                        checked={values.prefix === 'mister'}
-                        onChange={handleChange}
-                        className="radio"
-                        onBlur={handleBlur}
-                      />
-                      <span>Mister</span>
-                    </label>{' '}
-                    <label>
-                      <input
-                        name="prefix"
-                        type="radio"
-                        value="miss"
-                        checked={values.prefix === 'miss'}
-                        onChange={handleChange}
-                        className="radio"
-                        onBlur={handleBlur}
-                      />
-                      <span>Miss</span>
-                    </label>{' '}
-                    <label>
-                      <input
-                        name="prefix"
-                        type="radio"
-                        value="mrs"
-                        checked={values.prefix === 'mrs'}
-                        onChange={handleChange}
-                        className="radio"
-                        onBlur={handleBlur}
-                      />
-                      <span>Mrs</span>
-                    </label>
-                    <br />
-                    <label htmlFor="name">Name</label>
-                    <input
-                      name="name"
-                      className={
-                        errors.name && touched.name ? 'input is-error' : 'input'
-                      }
-                      onChange={handleChange}
-                      value={values.name || ''}
-                    />
-                    <br />
-                    <label htmlFor="lastname">Lastname</label>
-                    <input
-                      name="lastname"
-                      className={
-                        errors.lastname && touched.lastname
-                          ? 'input is-error'
-                          : 'input'
-                      }
-                      onChange={handleChange}
-                      value={values.lastname || ''}
-                    />
-                    <br />
-                    <label htmlFor="email">Email</label>
-                    <input
-                      name="email"
-                      className={
-                        errors.email && touched.email
-                          ? 'input is-error'
-                          : 'input'
-                      }
-                      onChange={handleChange}
-                      value={values.email || ''}
-                    />
-                    <br />
-                    <label>
-                      <input
-                        name="type"
-                        type="radio"
-                        value="student"
-                        checked={values.type === 'student'}
-                        onChange={handleChange}
-                        className="radio"
-                        onBlur={handleBlur}
-                      />
-                      <span>Student</span>
-                    </label>{' '}
-                    <label>
-                      <input
-                        name="type"
-                        type="radio"
-                        value="parent"
-                        checked={values.type === 'parent'}
-                        onChange={handleChange}
-                        className="radio"
-                        onBlur={handleBlur}
-                      />
-                      <span>Parent</span>
-                    </label>{' '}
-                    <label>
-                      <input
-                        name="type"
-                        type="radio"
-                        value="teacher"
-                        checked={values.type === 'teacher'}
-                        onChange={handleChange}
-                        className="radio"
-                        onBlur={handleBlur}
-                      />
-                      <span>Teacher</span>
-                    </label>
-                    <br />
-                    {values.type === 'student' && (
-                      <div>
-                        <label htmlFor="stdyear">Student's Year</label>
+            {this.state.key === '' ? (
+              <Formik
+                initialValues={{
+                  prefix: 'mister',
+                  name: '',
+                  lastname: '',
+                  email: '',
+                  type: 'student',
+                  stdyear: ' '
+                }}
+                validationSchema={SignupSchema}
+                onSubmit={(values, { resetForm }) => {
+                  this.submitToFirebase(values, resetForm)
+                }}
+              >
+                {({
+                  values,
+                  errors,
+                  touched,
+                  handleChange,
+                  handleBlur,
+                  handleSubmit,
+                  isSubmitting
+                }) => (
+                  <div className="field">
+                    <form onSubmit={handleSubmit}>
+                      <label htmlFor="prefix">Prefix</label> <br />
+                      <label>
                         <input
-                          name="stdyear"
-                          className={
-                            errors.stdyear && touched.stdyear
-                              ? 'input is-error'
-                              : 'input'
-                          }
+                          name="prefix"
+                          type="radio"
+                          value="mister"
+                          checked={values.prefix === 'mister'}
                           onChange={handleChange}
-                          value={values.stdyear || ''}
+                          className="radio"
+                          onBlur={handleBlur}
                         />
-                      </div>
-                    )}
-                    <br />
-                    <button
-                      className="btn is-primary"
-                      type="submit"
-                      disabled={isSubmitting}
-                    >
-                      Register!
-                    </button>
-                  </form>
-                </div>
-              )}
-            </Formik>
-            {this.state.key && (
+                        <span>Mister</span>
+                      </label>{' '}
+                      <label>
+                        <input
+                          name="prefix"
+                          type="radio"
+                          value="miss"
+                          checked={values.prefix === 'miss'}
+                          onChange={handleChange}
+                          className="radio"
+                          onBlur={handleBlur}
+                        />
+                        <span>Miss</span>
+                      </label>{' '}
+                      <label>
+                        <input
+                          name="prefix"
+                          type="radio"
+                          value="mrs"
+                          checked={values.prefix === 'mrs'}
+                          onChange={handleChange}
+                          className="radio"
+                          onBlur={handleBlur}
+                        />
+                        <span>Mrs</span>
+                      </label>
+                      <br />
+                      <label htmlFor="name">Name</label>
+                      <input
+                        name="name"
+                        className={
+                          errors.name && touched.name
+                            ? 'input is-error'
+                            : 'input'
+                        }
+                        onChange={handleChange}
+                        value={values.name || ''}
+                      />
+                      <br />
+                      <label htmlFor="lastname">Lastname</label>
+                      <input
+                        name="lastname"
+                        className={
+                          errors.lastname && touched.lastname
+                            ? 'input is-error'
+                            : 'input'
+                        }
+                        onChange={handleChange}
+                        value={values.lastname || ''}
+                      />
+                      <br />
+                      <label htmlFor="email">Email</label>
+                      <input
+                        name="email"
+                        className={
+                          errors.email && touched.email
+                            ? 'input is-error'
+                            : 'input'
+                        }
+                        onChange={handleChange}
+                        value={values.email || ''}
+                      />
+                      <br />
+                      <label>
+                        <input
+                          name="type"
+                          type="radio"
+                          value="student"
+                          checked={values.type === 'student'}
+                          onChange={handleChange}
+                          className="radio"
+                          onBlur={handleBlur}
+                        />
+                        <span>Student</span>
+                      </label>{' '}
+                      <label>
+                        <input
+                          name="type"
+                          type="radio"
+                          value="parent"
+                          checked={values.type === 'parent'}
+                          onChange={handleChange}
+                          className="radio"
+                          onBlur={handleBlur}
+                        />
+                        <span>Parent</span>
+                      </label>{' '}
+                      <label>
+                        <input
+                          name="type"
+                          type="radio"
+                          value="teacher"
+                          checked={values.type === 'teacher'}
+                          onChange={handleChange}
+                          className="radio"
+                          onBlur={handleBlur}
+                        />
+                        <span>Teacher</span>
+                      </label>
+                      <br />
+                      {values.type === 'student' && (
+                        <div>
+                          <label htmlFor="stdyear">Student's Year</label>
+                          <input
+                            name="stdyear"
+                            className={
+                              errors.stdyear && touched.stdyear
+                                ? 'input is-error'
+                                : 'input'
+                            }
+                            onChange={handleChange}
+                            value={values.stdyear || ''}
+                          />
+                        </div>
+                      )}
+                      <br />
+                      <button
+                        className="btn is-primary"
+                        type="submit"
+                        disabled={isSubmitting}
+                      >
+                        Register!
+                      </button>
+                    </form>
+                  </div>
+                )}
+              </Formik>
+            ) : (
               <div>
                 <TypographicContext>
-                  <h4 id="regtxt">โปรดเก็บ QR Code ไว้ยืนยันตัวตนหน้างาน</h4>
+                  <h3 id="regtxt">โปรดเก็บ QR Code ไว้ยืนยันตัวตนหน้างาน</h3>
+                  <QRCode value={this.state.key} />
+                  <p>โดยสามารถดาวน์โหลดสูจิบัตรได้ที่นี่</p>
                 </TypographicContext>
-                <QRCode value={this.state.key} />
               </div>
             )}
           </div>
