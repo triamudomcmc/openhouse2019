@@ -2,7 +2,7 @@ import React from 'react'
 import { ParallaxLayer } from 'react-spring/addons.cjs'
 import styled from 'styled-components'
 
-import { MOBILE } from './design/withViewType'
+import { XS_MOBILE, MOBILE } from './design/withViewType'
 import { ViewType } from './design'
 
 import { Clubs } from './clubs'
@@ -22,7 +22,9 @@ export const Booth = React.memo(props => (
   <ParallaxLayer
     offset={1}
     speed={0.5}
-    factor={props.viewType === MOBILE ? 4 : 1}
+    factor={
+      props.viewType === XS_MOBILE ? 4 : props.viewType === MOBILE ? 2 : 1
+    }
   >
     <Parent>
       <div className="container with-title">

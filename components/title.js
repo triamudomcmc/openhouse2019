@@ -4,6 +4,8 @@ import { ParallaxLayer } from 'react-spring/addons.cjs'
 import { Spring, config, animated } from 'react-spring'
 import { beat, fontSize, ViewType } from '../components/design'
 
+import { MOBILE } from '../components/design/withViewType'
+
 const Header = styled.div`
   position: absolute;
   top: 50%;
@@ -20,22 +22,29 @@ const Header = styled.div`
   }
 `
 
-export const Title = React.memo(() => (
+export const Title = React.memo(props => (
   <ParallaxLayer offset={0} speed={0.5}>
     <Header>
-      <Spring
-        native
-        from={{ opacity: 0 }}
-        to={{ opacity: 1 }}
-        config={config.molasses}
-      >
-        {props => (
-          <animated.div style={props}>
-            <h1>Triam Udom Open House</h1>
-            <h1>2019</h1>
-          </animated.div>
-        )}
-      </Spring>
+      {props.viewType === MOBILE ? (
+        <div>
+          <h1>Triam Udom Open House</h1>
+          <h1>2019</h1>
+        </div>
+      ) : (
+        <Spring
+          native
+          from={{ opacity: 0 }}
+          to={{ opacity: 1 }}
+          config={config.molasses}
+        >
+          {props => (
+            <animated.div style={props}>
+              <h1>Triam Udom Open House</h1>
+              <h1>2019</h1>
+            </animated.div>
+          )}
+        </Spring>
+      )}
     </Header>
   </ParallaxLayer>
 ))

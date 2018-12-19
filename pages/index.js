@@ -7,7 +7,9 @@ import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
 import { GA_TRACKING_ID } from '../lib/gtag'
 
 import { enhance } from '../components/design/withViewType'
-import { MOBILE } from '../components/design/withViewType'
+import { XS_MOBILE, MOBILE } from '../components/design/withViewType'
+
+import { Favicon, Social } from '../components/meta'
 
 import { Title } from '../components/title'
 import { Booth } from '../components/booth'
@@ -72,53 +74,27 @@ class Index extends React.PureComponent {
           `
             }}
           />
+          <Favicon />
+          <Social />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-          />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/static/favicons/apple-touch-icon.png"
-          />
-          <link rel="manifest" href="/static/manifest.json" />
-          <link
-            rel="mask-icon"
-            href="/static/favicons/safari-pinned-tab.svg"
-            color="#000000"
-          />
-          <meta name="msapplication-TileColor" content="#2b5797" />
-          <meta
-            name="msapplication-config"
-            content="/static/browserconfig.xml"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/static/favicons/32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/static/favicons/16x16.png"
-          />
-          <link rel="shortcut icon" href="/static/favicons/favicon.ico" />
-          <meta name="theme-color" color="#ffffff" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
           />
           <title>Triam Udom Open House</title>
         </Head>
         <GlobalStyle />
         <Parallax
-          pages={this.props.viewType === MOBILE ? 6.5 : 3}
+          pages={
+            this.props.viewType === XS_MOBILE
+              ? 6
+              : this.props.viewType === MOBILE
+              ? 5
+              : 3
+          }
           config={{ tension: 120, friction: 14 }}
           ref="parallax"
         >
-          <Title onClick={() => this.scroll(1)} />
+          <Title viewType={viewType} />
           <Scroll />
           <StarBg />
           <Booth viewType={viewType} />

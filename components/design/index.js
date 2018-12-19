@@ -141,7 +141,8 @@ export const ViewType = {
 }
 
 const BASE_FONT_SIZE = '14px'
-const BASE_FONT_SIZE_XS = '12px'
+const BASE_FONT_SIZE_MOBILE = '12px'
+const BASE_FONT_SIZE_XSMOBILE = '10px'
 
 export const GlobalStyle = createGlobalStyle`
 ${getFontFace()}
@@ -150,7 +151,10 @@ body {
   margin: 0;
   padding: 0;
   ${ViewType.mobile} {
-    font-size: ${BASE_FONT_SIZE_XS}
+    font-size: ${BASE_FONT_SIZE_MOBILE}
+  }
+  ${ViewType.xsMobile} {
+    font-size: ${BASE_FONT_SIZE_XSMOBILE}
   }
 }
 }
