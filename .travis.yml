@@ -8,4 +8,11 @@ before_script:
   - yarn build
   - yarn start &
 script:
-  - $(npm bin)/cypress run --record
+  - '$(npm bin)/cypress run --record'
+before_deply:
+  - yarn now-build
+deploy:
+  - now dist --token $NOW_TOKEN
+env:
+  global:
+    secure: f55FWez3R5Rg8Ki+Dx4GRYmg1yiORIqBNfw0EC6vNU6ycpxeQr6KlAw4c9SaPsitM/1nv1eohhifbnN1I762PqTw81x2LS9LO83bkn4Pt7c4KzTMe3TCZSxLpavjv/q2x7NOEqUY0aFyz5STkK5NWCm2dbhtJ7OtM6SM+Zpe4TgKv7uCDLJf9abfYDSNZBZsuzhsZkKvjc8lCLQupw0iO4y0ew4SuMNvg1MDUyn02BvsR8uKvY3hgyW6smUCO6HbHSAuMwybbmVjeRmRKU8BN2uuUoUo6ivvGn3Yq0FAST5wK+YatBaSPNGMxaaQ58LJFiEVT2eGYFiY/oEnKqdxyoKbzjvnlQXhHaG06ZghP3dX2okdDCJmfScq4C0WvJ/CJ+Qa2vQ8Tw9lW6LsMG3Pnkn4VImlHOkLpWTCDspxjXzTtXBvbe5i9RPSsbVvkQKiK8eNGHirF9Ha3/AnwXEsyublOPZBOx/A9lC7rJHt4Q3hNwsKMguRP1KYuKDW0fuu1D2ZL86ejGV0vYW7Pf70t0hK5dFh8vsnfnlc55fU1/qhxzSFzbqrL20lYsXuukAiZHHrL5n0gPvILqdOgHOxq347usPyu0ok6Oqj2GEARkwoqdhRQaEry7g+ON41RWHij2EajT2NKPCNWumKbxa7pQPkwtj4ClZn8rkABKnNrag=
