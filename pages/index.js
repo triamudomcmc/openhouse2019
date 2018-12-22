@@ -17,6 +17,7 @@ import { Register } from '../components/register'
 
 import '../static/css/nes.min.css'
 import '../static/css/index.css'
+import '../static/css/nprogress.css'
 
 const ScrollWrapper = styled.div`
   width: 1;
