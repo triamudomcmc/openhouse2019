@@ -2,12 +2,15 @@
 import styled from 'styled-components'
 import React from 'react'
 import { ParallaxLayer } from 'react-spring/addons.cjs'
-import axios from 'axios'
 import QRCode from 'qrcode.react'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
-import { TypographicContext } from './design'
 
+import { api } from '../lib/api'
+
+import { Box } from './box'
+
+import { TypographicContext } from './design'
 import { XS_MOBILE, MOBILE } from './design/withViewType'
 
 const Parent = styled.div`
@@ -203,8 +206,8 @@ export class Register extends React.PureComponent {
   }
   submitToFirebase = async (values, resetForm) => {
     try {
-      const res = await axios.post(
-        ' https://asia-northeast1-triamudomopenhouse2019.cloudfunctions.net/registration/register ',
+      const res = await api.post(
+        '  https://asia-northeast1-triamudomopenhouse2019.cloudfunctions.net/registration/register ',
         {
           prefix: values.prefix,
           name: values.name,
@@ -237,8 +240,7 @@ export class Register extends React.PureComponent {
         speed={0.5}
       >
         <Parent>
-          <div className="container with-title is-light">
-            <h1 className="title">Register</h1>
+          <Box title="Register">
             {this.state.key === '' ? (
               <RegForm submitToFirebase={this.submitToFirebase} />
             ) : (
@@ -260,7 +262,7 @@ export class Register extends React.PureComponent {
                 </TypographicContext>
               </div>
             )}
-          </div>
+          </Box>
         </Parent>
       </ParallaxLayer>
     )
