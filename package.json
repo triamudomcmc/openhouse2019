@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@mdx-js/mdx": "^0.16.6",
     "@zeit/next-css": "^1.0.1",
+    "@zeit/next-mdx": "^1.2.0",
     "axios": "^0.18.0",
     "formik": "^1.4.1",
     "next": "^7.0.2",
@@ -19,7 +21,7 @@
     "build": "next build",
     "start": "next start",
     "now-build": "next build && next export -o dist",
-    "test:e2e": "next && cypress open",
+    "test:e2e": "cypress open",
     "format": "prettier **/*.js --write --single-quote --no-semi",
     "lint": "eslint"
   },
@@ -39,8 +41,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --write",
+    "*.{js}": [
+      "eslint --fix",
+      "prettier --write --single-quote --no-semi",
       "git add"
     ]
   }

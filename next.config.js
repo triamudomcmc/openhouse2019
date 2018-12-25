@@ -1,2 +1,9 @@
 const withCSS = require('@zeit/next-css')
-module.exports = withCSS()
+const withMDX = require('@zeit/next-mdx')({
+  extension: /.mdx?$/
+})
+module.exports = withCSS(
+  withMDX({
+    pageExtensions: ['js', 'md', 'mdx']
+  })
+)
