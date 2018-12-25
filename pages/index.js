@@ -1,16 +1,12 @@
 import styled from 'styled-components'
-import Head from 'next/head'
 import React from 'react'
 import { beat, fontSize, Tracking, ViewType } from '../components/design'
-import { GlobalStyle } from '../components/design'
 import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs'
-import { GA_TRACKING_ID } from '../lib/gtag'
 
 import { enhance } from '../components/design/withViewType'
 import { XS_MOBILE, MOBILE } from '../components/design/withViewType'
 
-import { Favicon, Social } from '../components/meta'
-
+import { Layout } from '../components/layout'
 import { Title } from '../components/title'
 import { Booth } from '../components/booth'
 import { Register } from '../components/register'
@@ -60,47 +56,25 @@ class Index extends React.PureComponent {
     const { viewType } = this.props
     return (
       <React.Fragment>
-        <Head>
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}');
-          `
-            }}
-          />
-          <Favicon />
-          <Social />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-          />
-          <title>Triam Udom Open House</title>
-        </Head>
-        <GlobalStyle />
-        <Parallax
-          pages={
-            this.props.viewType === XS_MOBILE
-              ? 6
-              : this.props.viewType === MOBILE
-              ? 5
-              : 3
-          }
-          config={{ tension: 120, friction: 14 }}
-          ref="parallax"
-        >
-          <Title viewType={viewType} />
-          <Scroll />
-          <StarBg />
-          <Booth viewType={viewType} />
-          <Register viewType={viewType} />
-        </Parallax>
+        <Layout>
+          <Parallax
+            pages={
+              this.props.viewType === XS_MOBILE
+                ? 6
+                : this.props.viewType === MOBILE
+                ? 5
+                : 3
+            }
+            config={{ tension: 120, friction: 14 }}
+            ref="parallax"
+          >
+            <Title viewType={viewType} />
+            <Scroll />
+            <StarBg />
+            <Booth viewType={viewType} />
+            <Register viewType={viewType} />
+          </Parallax>
+        </Layout>
       </React.Fragment>
     )
   }

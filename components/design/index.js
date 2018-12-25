@@ -107,7 +107,6 @@ function getFontFace() {
     'Noto Sans',
     300
   )}
-
     ${generateFontFace('/static/fonts/NotoSans-SemiBold.ttf', 'Noto Sans', 600)}
     ${generateFontFace(
       '/static/fonts/NotoSansDisplay-Black.ttf',

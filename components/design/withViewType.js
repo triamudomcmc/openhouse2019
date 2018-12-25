@@ -10,12 +10,12 @@ export const MOBILE = 'mobile'
 export const TABLET = 'tablet'
 export const DESKTOP = 'desktop'
 
-function withViewType(Component) {
+const withViewType = Component => {
   return class Container extends React.PureComponent {
     state = { viewType: MOBILE, innerWidth: 0 }
 
     checkViewport = () => {
-      const innerWidth = window.innerWidth
+      let innerWidth = window.innerWidth
       if (innerWidth <= XS_MOBILE_BREAKPOINT) {
         this.setState({ viewType: XS_MOBILE, innerWidth })
       } else if (innerWidth <= MOBILE_BREAKPOINT) {
@@ -38,12 +38,8 @@ function withViewType(Component) {
     }
 
     render() {
-      return (
-        <Component
-          viewType={this.state.viewType}
-          innerWidth={this.state.innerWidth}
-        />
-      )
+      const { viewType, innerWidth } = this.state
+      return <Component viewType={viewType} innerWidth={innerWidth} />
     }
   }
 }

@@ -8,7 +8,7 @@ import * as Yup from 'yup'
 
 import { api } from '../lib/api'
 
-import { Box } from './box'
+import { Box } from './design/ui'
 
 import { TypographicContext } from './design'
 import { XS_MOBILE, MOBILE } from './design/withViewType'
