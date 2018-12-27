@@ -9,9 +9,10 @@ import { XS_MOBILE, MOBILE } from '../components/design/withViewType'
 import { Layout } from '../components/layout'
 import { Title } from '../components/title'
 import { Booth } from '../components/booth'
+import { Schedule } from '../components/schedule'
 import { Register } from '../components/register'
 
-import '../static/css/nes.min.css'
+import 'nes.css/css/nes.min.css'
 import '../static/css/index.css'
 import '../static/css/nprogress.css'
 
@@ -51,7 +52,6 @@ const StarBg = React.memo(() => (
 ))
 
 class Index extends React.PureComponent {
-  scroll = to => this.refs.parallax.scrollTo(to)
   render() {
     const { viewType } = this.props
     return (
@@ -60,10 +60,10 @@ class Index extends React.PureComponent {
           <Parallax
             pages={
               this.props.viewType === XS_MOBILE
-                ? 6
+                ? 7
                 : this.props.viewType === MOBILE
-                ? 5
-                : 3
+                ? 6
+                : 4
             }
             config={{ tension: 120, friction: 14 }}
             ref="parallax"
@@ -72,6 +72,7 @@ class Index extends React.PureComponent {
             <Scroll />
             <StarBg />
             <Booth viewType={viewType} />
+            <Schedule viewType={viewType} />
             <Register viewType={viewType} />
           </Parallax>
         </Layout>
