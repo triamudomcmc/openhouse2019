@@ -68,7 +68,7 @@ const RegForm = props => (
       handleSubmit,
       isSubmitting
     }) => (
-      <div className="field">
+      <div className="nes-field">
         <form onSubmit={handleSubmit}>
           <label htmlFor="prefix">Prefix</label> <br />
           <label>
@@ -78,7 +78,7 @@ const RegForm = props => (
               value="mister"
               checked={values.prefix === 'mister'}
               onChange={handleChange}
-              className="radio"
+              className="nes-radio"
               onBlur={handleBlur}
             />
             <span>Mister</span>
@@ -90,7 +90,7 @@ const RegForm = props => (
               value="miss"
               checked={values.prefix === 'miss'}
               onChange={handleChange}
-              className="radio"
+              className="nes-radio"
               onBlur={handleBlur}
             />
             <span>Miss</span>
@@ -102,7 +102,7 @@ const RegForm = props => (
               value="mrs"
               checked={values.prefix === 'mrs'}
               onChange={handleChange}
-              className="radio"
+              className="nes-radio"
               onBlur={handleBlur}
             />
             <span>Mrs</span>
@@ -111,7 +111,9 @@ const RegForm = props => (
           <label htmlFor="name">Name</label>
           <input
             name="name"
-            className={errors.name && touched.name ? 'input is-error' : 'input'}
+            className={
+              errors.name && touched.name ? 'nes-input is-error' : 'nes-input'
+            }
             onChange={handleChange}
             value={values.name || ''}
           />
@@ -120,7 +122,9 @@ const RegForm = props => (
           <input
             name="lastname"
             className={
-              errors.lastname && touched.lastname ? 'input is-error' : 'input'
+              errors.lastname && touched.lastname
+                ? 'nes-input is-error'
+                : 'nes-input'
             }
             onChange={handleChange}
             value={values.lastname || ''}
@@ -130,7 +134,7 @@ const RegForm = props => (
           <input
             name="email"
             className={
-              errors.email && touched.email ? 'input is-error' : 'input'
+              errors.email && touched.email ? 'nes-input is-error' : 'nes-input'
             }
             onChange={handleChange}
             value={values.email || ''}
@@ -143,7 +147,7 @@ const RegForm = props => (
               value="student"
               checked={values.type === 'student'}
               onChange={handleChange}
-              className="radio"
+              className="nes-radio"
               onBlur={handleBlur}
             />
             <span>Student</span>
@@ -155,7 +159,7 @@ const RegForm = props => (
               value="parent"
               checked={values.type === 'parent'}
               onChange={handleChange}
-              className="radio"
+              className="nes-radio"
               onBlur={handleBlur}
             />
             <span>Parent</span>
@@ -167,7 +171,7 @@ const RegForm = props => (
               value="teacher"
               checked={values.type === 'teacher'}
               onChange={handleChange}
-              className="radio"
+              className="nes-radio"
               onBlur={handleBlur}
             />
             <span>Teacher</span>
@@ -179,7 +183,9 @@ const RegForm = props => (
               <input
                 name="stdyear"
                 className={
-                  errors.stdyear && touched.stdyear ? 'input is-error' : 'input'
+                  errors.stdyear && touched.stdyear
+                    ? 'nes-input is-error'
+                    : 'nes-input'
                 }
                 onChange={handleChange}
                 value={values.stdyear || ''}
@@ -188,7 +194,9 @@ const RegForm = props => (
           )}
           <br />
           <button
-            className="btn is-primary"
+            className={
+              isSubmitting ? 'nes-btn is-disabled' : 'nes-btn is-primary'
+            }
             type="submit"
             disabled={isSubmitting}
           >
@@ -231,10 +239,10 @@ export class Register extends React.PureComponent {
       <ParallaxLayer
         offset={
           this.props.viewType === XS_MOBILE
-            ? 5
+            ? 6
             : this.props.viewType === MOBILE
-            ? 4
-            : 2
+            ? 5
+            : 3
         }
         factor={1}
         speed={0.5}
@@ -250,7 +258,7 @@ export class Register extends React.PureComponent {
                   <QRCode value={this.state.key} />
                   <p>โดยสามารถดาวน์โหลดสูจิบัตรได้ที่นี่</p>
                 </TypographicContext>
-                <button className="btn">Download!</button>
+                <button className="nes-btn">Download!</button>
                 <TypographicContext>
                   <br />
                   <a

@@ -29,7 +29,7 @@ const gifted = [
 ]
 
 export const Programs = React.memo(() => (
-  <div className="container with-title is-dark" style={{ color: 'white' }}>
+  <div className="nes-container with-title is-dark" style={{ color: 'white' }}>
     <h1 className="title">Programs</h1>
     <TypographicContext>
       <Container fluid>

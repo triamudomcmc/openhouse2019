@@ -1,3 +1,20 @@
 ::selection {
   background-color: #79ffe1;
 }
+
+.nes-container.is-light {
+  color: black;
+}
+
+.nes-container.is-light::before {
+  background-color: #fff;
+}
+
+.nes-container.is-light::after {
+  border-color: #212529;
+}
+
+.nes-container.is-light.with-title > .title {
+  color: black;
+  background-color: #fff;
+}

@@ -3,20 +3,10 @@ import { ParallaxLayer } from 'react-spring/addons.cjs'
 import styled from 'styled-components'
 
 import { XS_MOBILE, MOBILE } from './design/withViewType'
-import { ViewType } from './design'
 
 import { Clubs } from './clubs'
 import { Programs } from './programs'
-
-const Parent = styled.div`
-  padding: 0 2rem;
-  margin: 2rem;
-
-  ${ViewType.mobile} {
-    padding: 0;
-    margin: 0;
-  }
-`
+import { Box, Parent } from './design/ui'
 
 export const Booth = React.memo(props => (
   <ParallaxLayer
@@ -27,14 +17,11 @@ export const Booth = React.memo(props => (
     }
   >
     <Parent>
-      <div className="container with-title">
-        <h1 className="title">Booth</h1>
-        <div className="containers">
-          <Programs />
-          <br />
-          <Clubs />
-        </div>
-      </div>
+      <Box title="Booth">
+        <Programs />
+        <br />
+        <Clubs />
+      </Box>
     </Parent>
   </ParallaxLayer>
 ))

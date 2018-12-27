@@ -34,6 +34,10 @@ export const Layout = React.memo(props => (
         name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
       />
+      <link
+        href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+        rel="stylesheet"
+      />
       <title>Triam Udom Open House</title>
     </Head>
     <GlobalStyle />
