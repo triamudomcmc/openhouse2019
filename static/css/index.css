@@ -20,5 +20,5 @@
 }
 
 .fix-webkit {
-  -webkit-appearance: none;
+  visibility: none;
 }
