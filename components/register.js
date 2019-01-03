@@ -11,7 +11,7 @@ import { api } from '../lib/api'
 import { Box } from './design/ui'
 
 import { TypographicContext } from './design'
-import { XS_MOBILE, MOBILE } from './design/withViewType'
+import { MOBILE } from './design/withViewType'
 
 const Parent = styled.div`
   position: absolute;
@@ -237,13 +237,7 @@ export class Register extends React.PureComponent {
   render() {
     return (
       <ParallaxLayer
-        offset={
-          this.props.viewType === XS_MOBILE
-            ? 6
-            : this.props.viewType === MOBILE
-            ? 5
-            : 3
-        }
+        offset={this.props.viewType === MOBILE ? 8 : 4}
         factor={1}
         speed={0.5}
       >
