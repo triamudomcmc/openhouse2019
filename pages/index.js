@@ -11,6 +11,7 @@ import { Title } from '../components/title'
 import { Booth } from '../components/booth'
 import { Schedule } from '../components/schedule'
 import { Register } from '../components/register'
+import { Map } from '../components/map'
 
 import 'nes.css/css/nes.min.css'
 import '../static/css/index.css'
@@ -33,17 +34,17 @@ const ScrollWrapper = styled.div`
   }
 `
 
-const Scroll = React.memo(() => (
+const Scroll = React.memo(props => (
   <ParallaxLayer offset={0} speed={0.7}>
     <ScrollWrapper>S C R O L L</ScrollWrapper>
   </ParallaxLayer>
 ))
 
-const StarBg = React.memo(() => (
+const StarBg = React.memo(props => (
   <Parallax.Layer
     offset={1}
     speed={0}
-    factor={3}
+    factor={props.viewType === MOBILE ? 8 : 5}
     style={{
       backgroundImage: "url('/static/svg/star.svg')",
       backgroundSize: 'cover'
@@ -52,27 +53,25 @@ const StarBg = React.memo(() => (
 ))
 
 class Index extends React.PureComponent {
+  scrollToRegis = () => {
+    this.parallax.scrollTo(5)
+  }
   render() {
     const { viewType } = this.props
     return (
       <React.Fragment>
         <Layout>
           <Parallax
-            pages={
-              this.props.viewType === XS_MOBILE
-                ? 7
-                : this.props.viewType === MOBILE
-                ? 6
-                : 4
-            }
+            pages={this.props.viewType === MOBILE ? 8 : 5}
             config={{ tension: 120, friction: 14 }}
-            ref="parallax"
+            ref={ref => (this.parallax = ref)}
           >
             <Title viewType={viewType} />
-            <Scroll />
-            <StarBg />
+            <Scroll scrollToRegis={this.scrollToRegis} />
+            <StarBg viewType={viewType} />
             <Booth viewType={viewType} />
             <Schedule viewType={viewType} />
+            <Map viewType={viewType} />
             <Register viewType={viewType} />
           </Parallax>
         </Layout>
