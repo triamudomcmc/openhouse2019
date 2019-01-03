@@ -16,9 +16,7 @@ const withViewType = Component => {
 
     checkViewport = () => {
       let innerWidth = window.innerWidth
-      if (innerWidth <= XS_MOBILE_BREAKPOINT) {
-        this.setState({ viewType: XS_MOBILE, innerWidth })
-      } else if (innerWidth <= MOBILE_BREAKPOINT) {
+      if (innerWidth <= MOBILE_BREAKPOINT) {
         this.setState({ viewType: MOBILE, innerWidth })
       } else if (innerWidth <= TABLET_BREAKPOINT) {
         this.setState({ viewType: TABLET, innerWidth })

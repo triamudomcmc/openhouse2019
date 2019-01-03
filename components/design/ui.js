@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ViewType } from './index'
 
 export const Box = React.memo(props => (
   <div className="nes-container with-title is-light">
@@ -10,11 +9,10 @@ export const Box = React.memo(props => (
 ))
 
 export const Parent = styled.div`
-  padding: 0 2rem;
-  margin: 2rem;
-
-  ${ViewType.mobile} {
-    padding: 0;
-    margin: 0;
-  }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `

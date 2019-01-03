@@ -74,25 +74,6 @@ export const Tracking = {
   extraWide: '0.1em'
 }
 
-export const TypographicContext = styled.div`
-  font-family: ${Fonts.body};
-  font-weight: 600;
-  font-size: 1rem;
-  > p,
-  > blockquote,
-  > ul,
-  > ol,
-  > dl,
-  > table,
-  > pre {
-    margin-top: ${beat(1)};
-    margin-bottom: 0;
-    &:first-child: {
-      margin-top: 0;
-    }
-  }
-`
-
 function generateFontFace(src, family, weight) {
   return `@font-face {
         font-family: "${family}";
@@ -141,7 +122,29 @@ export const ViewType = {
 
 const BASE_FONT_SIZE = '14px'
 const BASE_FONT_SIZE_MOBILE = '12px'
-const BASE_FONT_SIZE_XSMOBILE = '10px'
+
+export const TypographicContext = styled.div`
+  font-family: ${Fonts.body};
+  font-weight: 600;
+  font-size: 1rem;
+  > p,
+  > blockquote,
+  > ul,
+  > ol,
+  > dl,
+  > table,
+  > pre {
+    margin-top: ${beat(1)};
+    margin-bottom: 0;
+    &:first-child: {
+      margin-top: 0;
+    }
+  }
+
+  ${ViewType.mobile} {
+    font-size: 0.9rem;
+  }
+`
 
 export const GlobalStyle = createGlobalStyle`
 ${getFontFace()}
@@ -151,9 +154,6 @@ body {
   padding: 0;
   ${ViewType.mobile} {
     font-size: ${BASE_FONT_SIZE_MOBILE}
-  }
-  ${ViewType.xsMobile} {
-    font-size: ${BASE_FONT_SIZE_XSMOBILE}
   }
 }
 }
