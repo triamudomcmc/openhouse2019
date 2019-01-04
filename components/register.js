@@ -313,6 +313,7 @@ export class Register extends React.PureComponent {
         res(bl)
       })
     })
+    document.body.appendChild(link)
     link.href = URL.createObjectURL(blob)
     link.download = 'OpenHouseQR.png'
     link.click()
