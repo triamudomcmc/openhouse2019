@@ -1,46 +1,69 @@
 import React from 'react'
-import { ParallaxLayer } from 'react-spring/addons.cjs'
 import styled from 'styled-components'
 
 import { MOBILE } from './design/withViewType'
-import { ViewType } from './design'
 
 import { Clubs } from './clubs'
 import { Programs } from './programs'
 import { Box } from './design/ui'
 
 const Parent = styled.div`
-  padding: 0 2rem;
-  margin: 2rem;
-
-  ${ViewType.mobile} {
-    padding: 0;
-    margin: 0;
-  }
+  transform: translateY(0);
 `
 
-const Content = React.memo(() => (
-  <React.Fragment>
-    <Programs />
-    <br />
-    <Clubs />
-  </React.Fragment>
-))
+export class Booth extends React.PureComponent {
+  state = {
+    isProgramsCollapse: true,
+    isClubsCollapse: true
+  }
 
-export const Booth = React.memo(props => (
-  <ParallaxLayer
-    offset={1}
-    speed={0.5}
-    factor={props.viewType === MOBILE ? 3 : 1}
-  >
-    <Parent>
-      {props.viewType === MOBILE ? (
-        <Content />
-      ) : (
-        <Box title="Booth">
-          <Content />
-        </Box>
-      )}
-    </Parent>
-  </ParallaxLayer>
-))
+  handlePExpand = () => {
+    this.setState({ isProgramsCollapse: false })
+  }
+
+  handlePCollapse = () => {
+    this.setState({ isProgramsCollapse: true })
+  }
+
+  handleCExpand = () => {
+    this.setState({ isClubsCollapse: false })
+  }
+
+  handleCCollapse = () => {
+    this.setState({ isClubsCollapse: true })
+  }
+
+  render() {
+    return (
+      <section className="section" id="content">
+        <Parent>
+          {this.props.viewType === MOBILE ? (
+            <React.Fragment>
+              <Programs
+                collapseStatus={this.state.isProgramsCollapse}
+                handlePCollapse={this.handlePCollapse}
+                handlePExpand={this.handlePExpand}
+                viewType={this.props.viewType}
+              />
+              <br />
+              <Clubs
+                collapseStatus={this.state.isClubsCollapse}
+                handleCCollapse={this.handleCCollapse}
+                handleCExpand={this.handleCExpand}
+                viewType={this.props.viewType}
+              />
+            </React.Fragment>
+          ) : (
+            <Box title="Booth">
+              <React.Fragment>
+                <Programs />
+                <br />
+                <Clubs />
+              </React.Fragment>
+            </Box>
+          )}
+        </Parent>
+      </section>
+    )
+  }
+}
