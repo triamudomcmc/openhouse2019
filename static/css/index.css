@@ -3,22 +3,38 @@
 }
 
 .nes-container.is-light {
-  color: black;
+  color: black !important;
 }
 
 .nes-container.is-light::before {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 .nes-container.is-light::after {
-  border-color: #212529;
+  border-color: #212529 !important;
 }
 
 .nes-container.is-light.with-title > .title {
   color: black;
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 .fix-webkit {
-  visibility: none;
+  -webkit-visibility: none;
+}
+
+.title-button {
+  font-size: 1.3rem;
+  margin-top: 44px;
+}
+
+body {
+  background-image: url(/static/svg/star.svg);
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .title-button {
+    font-size: 0.9rem;
+  }
 }
