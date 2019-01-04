@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React from 'react'
-import QRCode from 'qrcode.react'
+import QRCode from '../lib/qr'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import { Transition, animated, config } from 'react-spring'
@@ -64,9 +64,15 @@ const RegForm = props => (
       handleSubmit,
       isSubmitting
     }) => (
-      <div className="nes-field">
+      <div
+        className="nes-field"
+        style={{
+          fontFamily: 'Noto Sans Thai UI, Noto Sans',
+          fontWeight: '600'
+        }}
+      >
         <form onSubmit={handleSubmit}>
-          <label htmlFor="prefix">Prefix</label> <br />
+          <label htmlFor="prefix">คำนำหน้าชื่อ</label> <br />
           <label>
             <input
               name="prefix"
@@ -77,7 +83,7 @@ const RegForm = props => (
               className="nes-radio"
               onBlur={handleBlur}
             />
-            <span>Mister</span>
+            <span>นาย</span>
           </label>{' '}
           <label>
             <input
@@ -89,7 +95,7 @@ const RegForm = props => (
               className="nes-radio"
               onBlur={handleBlur}
             />
-            <span>Miss</span>
+            <span>นางสาว</span>
           </label>{' '}
           <label>
             <input
@@ -101,10 +107,34 @@ const RegForm = props => (
               className="nes-radio"
               onBlur={handleBlur}
             />
-            <span>Mrs</span>
+            <span>นาง</span>
+          </label>
+          <label>
+            <input
+              name="prefix"
+              type="radio"
+              value="master"
+              checked={values.prefix === 'master'}
+              onChange={handleChange}
+              className="nes-radio"
+              onBlur={handleBlur}
+            />
+            <span>เด็กชาย</span>
+          </label>
+          <label>
+            <input
+              name="prefix"
+              type="radio"
+              value="miss(child)"
+              checked={values.prefix === 'miss(child)'}
+              onChange={handleChange}
+              className="nes-radio"
+              onBlur={handleBlur}
+            />
+            <span>เด็กหญิง</span>
           </label>
           <br />
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">ชื่อ</label>
           <input
             name="name"
             className={
@@ -115,7 +145,7 @@ const RegForm = props => (
             value={values.name || ''}
           />
           <br />
-          <label htmlFor="lastname">Lastname</label>
+          <label htmlFor="lastname">นามสกุล</label>
           <input
             name="lastname"
             className={
@@ -128,7 +158,7 @@ const RegForm = props => (
             value={values.lastname || ''}
           />
           <br />
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">อีเมล</label>
           <input
             name="email"
             className={
@@ -150,7 +180,7 @@ const RegForm = props => (
               className="nes-radio"
               onBlur={handleBlur}
             />
-            <span>Student</span>
+            <span>นักเรียน</span>
           </label>{' '}
           <label>
             <input
@@ -162,7 +192,7 @@ const RegForm = props => (
               className="nes-radio"
               onBlur={handleBlur}
             />
-            <span>Parent</span>
+            <span>ผู้ปกครอง</span>
           </label>{' '}
           <label>
             <input
@@ -174,7 +204,7 @@ const RegForm = props => (
               className="nes-radio"
               onBlur={handleBlur}
             />
-            <span>Teacher</span>
+            <span>ครู/อาจารย์</span>
           </label>{' '}
           <label>
             <input
@@ -186,7 +216,7 @@ const RegForm = props => (
               className="nes-radio"
               onBlur={handleBlur}
             />
-            <span>Others</span>
+            <span>อื่น ๆ</span>
           </label>
           <br />
           <Transition
@@ -201,20 +231,29 @@ const RegForm = props => (
               show &&
               (props => (
                 <animated.div style={props}>
-                  <label htmlFor="stdyear">Student&apos;s Year</label>
+                  <label htmlFor="stdyear">ระดับการศึกษา</label>
                   <br />
                   <select>
+                    <option value="p1-3" onChange={handleChange}>
+                      ประถมศึกษาตอนต้น
+                    </option>
+                    <option value="p4-6" onChange={handleChange}>
+                      ประถมศึกษาตอนปลาย
+                    </option>
                     <option value="m1" onChange={handleChange}>
-                      M1
+                      มัธยมศึกษาปีที่ 1
                     </option>
                     <option value="m2" onChange={handleChange}>
-                      M2
+                      มัธยมศึกษาปีที่ 2
                     </option>
                     <option value="m3" onChange={handleChange}>
-                      M3
+                      มัธยมศึกษาปีที่ 3
+                    </option>
+                    <option value="highschool" onChange={handleChange}>
+                      มัธยมศึกษาตอนปลาย
                     </option>
                     <option value="others" onChange={handleChange}>
-                      Others
+                      อื่น ๆ
                     </option>
                   </select>
                 </animated.div>
@@ -228,8 +267,9 @@ const RegForm = props => (
             }
             type="submit"
             disabled={isSubmitting}
+            style={{ fontWeight: '700' }}
           >
-            Register!
+            ลงทะเบียน
           </button>
         </form>
       </div>
@@ -264,6 +304,20 @@ export class Register extends React.PureComponent {
   resetKey = () => {
     this.setState({ key: '' })
   }
+
+  downloadQRCode = async () => {
+    const link = document.createElement('a')
+    const blob = await new Promise((res, rej) => {
+      const canvas = document.getElementById('qrcanvas')
+      canvas.toBlob(bl => {
+        res(bl)
+      })
+    })
+    link.href = URL.createObjectURL(blob)
+    link.download = 'OpenHouseQR.png'
+    link.click()
+  }
+
   render() {
     return (
       <section className="section">
@@ -278,8 +332,17 @@ export class Register extends React.PureComponent {
                     <p style={{ color: 'red' }}>
                       โปรดเก็บ QR Code ไว้ยืนยันตัวตนหน้างาน
                     </p>
-                    <QRCode value={this.state.key} />
-                    <br />
+                  </TypographicContext>
+                  <QRCode value={this.state.key} />
+                  <br />
+                  <button
+                    onClick={this.downloadQRCode}
+                    className="nes-btn is-success"
+                    style={{ marginTop: '25px' }}
+                  >
+                    Download QRCode
+                  </button>
+                  <TypographicContext>
                     <a
                       onClick={() => this.setState({ key: '' })}
                       style={{ color: 'grey' }}

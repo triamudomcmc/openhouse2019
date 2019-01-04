@@ -103,7 +103,11 @@ function getFontFace() {
       '/static/fonts/NotoSansThaiUI-SemiBold.ttf',
       'Noto Sans Thai UI',
       600
-    )}`
+    )}${generateFontFace(
+    '/static/fonts/NotoSansThaiUI-Bold.ttf',
+    'Noto Sans Thai UI',
+    700
+  )}`
 }
 
 /**
