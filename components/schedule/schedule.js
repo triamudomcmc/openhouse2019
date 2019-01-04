@@ -23,25 +23,7 @@ const Choice = styled.span`
 `
 
 export class Schedule extends React.PureComponent {
-  state = {
-    currentTab: MULTIPURPOSE
-  }
-
-  handleTabChange = e => {
-    this.setState({ currentTab: e.target.value })
-  }
-
   render() {
-    let content
-    switch (this.state.currentTab) {
-      case MULTIPURPOSE:
-        content = <Multipurpose />
-        break
-
-      case AUDITORIUM:
-        content = <Auditorium />
-        break
-    }
     return (
       <section className="section">
         <div className="container">
