@@ -1,17 +1,21 @@
 import React from 'react'
-import { ParallaxLayer } from 'react-spring/addons.cjs'
 import styled from 'styled-components'
 
-import { XS_MOBILE, MOBILE } from '../design/withViewType'
 import { TypographicContext, Fonts } from '../design'
 
-import { Box, Parent } from '../design/ui'
+import { Box } from '../design/ui'
 import { Auditorium } from './auditorium'
 import { Multipurpose } from './multipurpose'
 
 const MULTIPURPOSE = 'ลาน 70ปี'
 const AUDITORIUM = 'หอประชุม'
 
+const Parent = styled.div`
+  transform: translateY(0);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`
 const Choice = styled.span`
   font-family: ${Fonts.body};
   font-size: 1.2rem;
@@ -39,39 +43,23 @@ export class Schedule extends React.PureComponent {
         break
     }
     return (
-      <ParallaxLayer
-        offset={this.props.viewType === MOBILE ? 4 : 2}
-        factor={this.props.viewType === MOBILE ? 2 : 1}
-        speed={0.5}
-      >
-        <Parent>
-          <Box title="Schedule">
-            <label>
-              <input
-                name="tabs"
-                type="radio"
-                value={MULTIPURPOSE}
-                checked={this.state.currentTab === MULTIPURPOSE}
-                onChange={this.handleTabChange}
-                className="nes-radio fix-webkit"
-              />
-              <Choice>ลาน 70ปี</Choice>
-            </label>{' '}
-            <label>
-              <input
-                name="tabs"
-                type="radio"
-                value={AUDITORIUM}
-                checked={this.state.currentTab === AUDITORIUM}
-                onChange={this.handleTabChange}
-                className="nes-radio fix-webkit"
-              />
-              <Choice>หอประชุม</Choice>
-            </label>
-            <TypographicContext>{content}</TypographicContext>
-          </Box>
-        </Parent>
-      </ParallaxLayer>
+      <section className="section">
+        <div className="container">
+          <Parent>
+            <Box title="Schedule">
+              <h1
+                style={{
+                  fontSize: '2rem',
+                  color: '#f793c2',
+                  textAlign: 'center'
+                }}
+              >
+                COMING SOON!
+              </h1>
+            </Box>
+          </Parent>
+        </div>
+      </section>
     )
   }
 }

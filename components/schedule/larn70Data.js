@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const D1Page1 = React.memo(() => (
+export const Day1 = React.memo(() => (
   <React.Fragment>
     <tr>
       <td>08:00 - 09:30</td>
@@ -27,11 +27,6 @@ export const D1Page1 = React.memo(() => (
       <td>การแสดงดนตรีไทย</td>
       <td>ชมรมดนตรีไทย</td>
     </tr>
-  </React.Fragment>
-))
-
-export const D1Page2 = React.memo(() => (
-  <React.Fragment>
     <tr>
       <td>09:30 - 09:40</td>
       <td>พิธีกรแนะนำงาน</td>
@@ -57,11 +52,6 @@ export const D1Page2 = React.memo(() => (
       <td>การแสดงควงธง</td>
       <td>คัลเลอร์การ์ดสีแสด</td>
     </tr>
-  </React.Fragment>
-))
-
-export const D1Page3 = React.memo(() => (
-  <React.Fragment>
     <tr>
       <td>10:15 - 10:30</td>
       <td>K-pop show</td>
@@ -87,11 +77,6 @@ export const D1Page3 = React.memo(() => (
       <td>การแสดง Soran</td>
       <td>ชมรมสีสรรพ์ภาษาต่างประเทศที่ 2 ภาษาญี่ปุ่น</td>
     </tr>
-  </React.Fragment>
-))
-
-export const D1Page4 = React.memo(() => (
-  <React.Fragment>
     <tr>
       <td>11:05 - 11:10</td>
       <td>การแสดงเชียร์เพลงเราเตรียม</td>
@@ -117,11 +102,6 @@ export const D1Page4 = React.memo(() => (
       <td>การแสดง Lation Dance</td>
       <td>ชมรมสีสรรพ์ภาษาต่างประเทศที่ 2 ภาษาสเปน</td>
     </tr>
-  </React.Fragment>
-))
-
-export const D1Page5 = React.memo(() => (
-  <React.Fragment>
     <tr>
       <td>11:45 - 14:00</td>
       <td>การแสดงจากชมรมดนตรีสากล</td>
@@ -130,7 +110,7 @@ export const D1Page5 = React.memo(() => (
   </React.Fragment>
 ))
 
-export const D2Page1 = React.memo(() => (
+export const Day2 = React.memo(() => (
   <React.Fragment>
     <tr>
       <td>09:30 - 09:50</td>
@@ -157,11 +137,6 @@ export const D2Page1 = React.memo(() => (
       <td>Entertainer Showcase</td>
       <td>ชมรมสันทนากร</td>
     </tr>
-  </React.Fragment>
-))
-
-export const D2Page2 = React.memo(() => (
-  <React.Fragment>
     <tr>
       <td>10:25 - 10:30</td>
       <td>การแสดงควงธง</td>
@@ -187,11 +162,6 @@ export const D2Page2 = React.memo(() => (
       <td>การแสดงควงธง</td>
       <td>คัลเลอร์การ์ดสีฟ้า</td>
     </tr>
-  </React.Fragment>
-))
-
-export const D2Page3 = React.memo(() => (
-  <React.Fragment>
     <tr>
       <td>11:45 - 11:55</td>
       <td>French Chorus</td>

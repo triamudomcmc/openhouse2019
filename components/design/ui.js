@@ -3,7 +3,9 @@ import styled from 'styled-components'
 
 export const Box = React.memo(props => (
   <div className="nes-container with-title is-light">
-    <h1 className="title">{props.title}</h1>
+    <h1 className="title" style={{ fontSize: '1.5rem' }}>
+      {props.title}
+    </h1>
     {props.children}
   </div>
 ))
