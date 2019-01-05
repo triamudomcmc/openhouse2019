@@ -234,6 +234,7 @@ const RegForm = props => {
                   <option value="highschool">มัธยมศึกษาตอนปลาย</option>
                   <option value="others">อื่น ๆ</option>
                 </select>
+                <br />
               </React.Fragment>
             )}
             <br />
@@ -325,6 +326,7 @@ export class Register extends React.PureComponent {
                   >
                     Download QRCode
                   </button>
+
                   <TypographicContext>
                     <a
                       onClick={() => this.setState({ key: '' })}

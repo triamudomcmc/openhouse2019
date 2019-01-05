@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-awesome-styled-grid'
-import { Transition, animated, config } from 'react-spring'
+import { Transition, animated } from 'react-spring'
 
 import { TypographicContext } from './design'
 import { MOBILE } from './design/withViewType'
