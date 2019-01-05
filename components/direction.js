@@ -17,7 +17,10 @@ export const Direction = React.memo(() => (
         <Box title="Direction">
           <TypographicContext>
             <p style={{ fontSize: '2rem' }}>การเดินทาง</p>
-            <ul className="nes-list is-disc">
+            <ul
+              className="nes-list is-disc"
+              style={{ paddingLeft: '40px', paddingRight: '40px' }}
+            >
               <li>
                 <p style={{ fontWeight: 700 }}>รถประจำทาง</p>{' '}
                 มีป้ายรถประจำทางอยู่ทั้งสองประตูของโรงเรียน
@@ -40,7 +43,10 @@ export const Direction = React.memo(() => (
               </li>
             </ul>
             <p style={{ fontSize: '2rem' }}>ประตูโรงเรียน</p>
-            <ul className="nes-list is-disc">
+            <ul
+              className="nes-list is-disc"
+              style={{ paddingLeft: '40px', paddingRight: '40px' }}
+            >
               <li>
                 <p style={{ fontWeight: 700 }}>ประตูถนนพญาไท</p>(ตึก 1)
                 ใกล้กับคณะสถาปัตยกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
@@ -54,8 +60,9 @@ export const Direction = React.memo(() => (
             </ul>
             <ul>
               <li style={{ color: 'red' }}>
-                ปิดประตูถนนอังรีดูนังต์ (ตึก 50 ปี)
-                ใกล้เคียงกับคณะสัตวแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
+                *หมายเหตุ ประตูถนนอังรีดูนังต์ (ตึก 50 ปี)
+                ใกล้เคียงกับคณะสัตวแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย{' '}
+                <i>ไม่เปิดให้ใช้งาน</i>
               </li>
             </ul>
           </TypographicContext>
