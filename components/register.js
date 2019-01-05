@@ -233,28 +233,14 @@ const RegForm = props => (
                 <animated.div style={props}>
                   <label htmlFor="stdyear">ระดับการศึกษา</label>
                   <br />
-                  <select>
-                    <option value="p1-3" onChange={handleChange}>
-                      ประถมศึกษาตอนต้น
-                    </option>
-                    <option value="p4-6" onChange={handleChange}>
-                      ประถมศึกษาตอนปลาย
-                    </option>
-                    <option value="m1" onChange={handleChange}>
-                      มัธยมศึกษาปีที่ 1
-                    </option>
-                    <option value="m2" onChange={handleChange}>
-                      มัธยมศึกษาปีที่ 2
-                    </option>
-                    <option value="m3" onChange={handleChange}>
-                      มัธยมศึกษาปีที่ 3
-                    </option>
-                    <option value="highschool" onChange={handleChange}>
-                      มัธยมศึกษาตอนปลาย
-                    </option>
-                    <option value="others" onChange={handleChange}>
-                      อื่น ๆ
-                    </option>
+                  <select name="stdyear" onChange={handleChange}>
+                    <option value="p1-3">ประถมศึกษาตอนต้น</option>
+                    <option value="p4-6">ประถมศึกษาตอนปลาย</option>
+                    <option value="m1">มัธยมศึกษาปีที่ 1</option>
+                    <option value="m2">มัธยมศึกษาปีที่ 2</option>
+                    <option value="m3">มัธยมศึกษาปีที่ 3</option>
+                    <option value="highschool">มัธยมศึกษาตอนปลาย</option>
+                    <option value="others">อื่น ๆ</option>
                   </select>
                 </animated.div>
               ))
