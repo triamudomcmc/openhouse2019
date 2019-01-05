@@ -1,7 +1,12 @@
 import styled from 'styled-components'
 import React from 'react'
-import { Spring, config, animated } from 'react-spring'
-import { beat, fontSize, ViewType } from '../components/design'
+import { Spring, animated } from 'react-spring'
+import {
+  beat,
+  fontSize,
+  ViewType,
+  TypographicContext
+} from '../components/design'
 
 import { MOBILE } from '../components/design/withViewType'
 
@@ -23,6 +28,9 @@ export const Title = React.memo(props => (
             <div>
               <h1>Triam Udom Open House</h1>
               <h1>2019</h1>
+              <TypographicContext>
+                นิทรรศการ 81 ปี เตรียมอุดมศึกษาก้าวหน้าสู่อนาคต
+              </TypographicContext>
               <button
                 className="nes-btn is-success title-button"
                 onClick={scrollToContent}
@@ -37,9 +45,15 @@ export const Title = React.memo(props => (
                 <animated.div style={props}>
                   <h1>Triam Udom Open House</h1>
                   <h1>2019</h1>
+                  <TypographicContext>
+                    <p style={{ fontSize: fontSize(2) }}>
+                      นิทรรศการ 81 ปี เตรียมอุดมศึกษาก้าวหน้าสู่อนาคต
+                    </p>
+                  </TypographicContext>
                   <button
                     className="nes-btn is-success title-button"
                     onClick={scrollToContent}
+                    style={{ marginTop: '50px' }}
                   >
                     START!
                   </button>
