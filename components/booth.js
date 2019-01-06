@@ -54,7 +54,7 @@ export class Booth extends React.PureComponent {
               />
             </React.Fragment>
           ) : (
-            <Box title="Booth">
+            <Box title="Exhibition">
               <React.Fragment>
                 <Programs />
                 <br />

@@ -29,7 +29,8 @@ export const Title = React.memo(props => (
               <h1>Triam Udom Open House</h1>
               <h1>2019</h1>
               <TypographicContext>
-                นิทรรศการ 81 ปี เตรียมอุดมศึกษาก้าวหน้าสู่อนาคต
+                <p>นิทรรศการ 81 ปี เตรียมอุดมศึกษาก้าวหน้าสู่อนาคต</p>
+                <p>11-12 มกราคม 2562</p>
               </TypographicContext>
               <button
                 className="nes-btn is-success title-button"
@@ -49,6 +50,7 @@ export const Title = React.memo(props => (
                     <p style={{ fontSize: fontSize(2) }}>
                       นิทรรศการ 81 ปี เตรียมอุดมศึกษาก้าวหน้าสู่อนาคต
                     </p>
+                    <p style={{ fontSize: fontSize(1) }}>11-12 มกราคม 2562</p>
                   </TypographicContext>
                   <button
                     className="nes-btn is-success title-button"
