@@ -17,6 +17,13 @@ export const Direction = React.memo(() => (
         <Box title="Direction">
           <TypographicContext>
             <p style={{ fontSize: '2rem' }}>การเดินทาง</p>
+            <a
+              rel="noopener noreferrer"
+              href="https://goo.gl/maps/EtM6hsJg8kz"
+              target="_blank"
+            >
+              แผนที่
+            </a>
             <ul
               className="nes-list is-disc"
               style={{ paddingLeft: '40px', paddingRight: '40px' }}
