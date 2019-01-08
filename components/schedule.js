@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Box } from '../design/ui'
-import { TypographicContext } from '../design'
+import { Box } from './design/ui'
+import { TypographicContext } from './design'
 
-import { larn70 } from './larn70'
-import { Auditorium } from './auditorium'
+import { larn70 } from '../data/larn70'
+import { Auditorium } from '../data/auditorium'
 
 const Parent = styled.div`
   transform: translateY(0);

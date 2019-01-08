@@ -6,35 +6,109 @@ import { TypographicContext } from './design'
 import { MOBILE } from './design/withViewType'
 
 const sciMathLang = [
-  'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาเยอรมัน)',
-  'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาฝรั่งเศส)',
-  'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาสเปน)',
-  'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาจีน)',
-  'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาเกาหลี)',
-  'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาญี่ปุ่น)'
+  {
+    title: 'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาเยอรมัน)',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/906515299553279/'
+  },
+  {
+    title: 'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาฝรั่งเศส)',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/907009699503839/'
+  },
+  {
+    title: 'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาสเปน)',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/906470406224435/'
+  },
+  {
+    title: 'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาจีน)',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/905823252955817/'
+  },
+  {
+    title: 'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาเกาหลี)',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/905788989625910/'
+  },
+  {
+    title: 'วิทยาศาสตร์-คณิตศาสตร์ (ภาษาญี่ปุ่น)',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/907067599498049/'
+  }
 ]
 
 const sciMath = [
-  'วิทยาศาสตร์-คณิตศาสตร์ (คุณภาพชีวิต)',
-  'วิทยาศาสตร์-คณิตศาสตร์ (คอมพิวเตอร์)',
-  'วิทยาศาสตร์-คณิตศาสตร์ (บริหาร)',
-  'วิทยาศาสตร์-คณิตศาสตร์ (คณิตศาสตร์ประยุกต์)'
+  {
+    title: 'วิทยาศาสตร์-คณิตศาสตร์ (คุณภาพชีวิต)',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/909949672543175/'
+  },
+  {
+    title: 'วิทยาศาสตร์-คณิตศาสตร์ (คอมพิวเตอร์)',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/909964092541733/'
+  },
+  {
+    title: 'วิทยาศาสตร์-คณิตศาสตร์ (บริหาร)',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/910476535823822/'
+  },
+  {
+    title: 'วิทยาศาสตร์-คณิตศาสตร์ (คณิตศาสตร์ประยุกต์)',
+    link: 'javascript:void();'
+  }
 ]
 
 const art = [
-  'ภาษา-จีน',
-  'ภาษา-ญี่ปุ่น',
-  'ภาษา-เกาหลี',
-  'ภาษา-เยอรมัน',
-  'ภาษา-สเปน',
-  'ภาษา-ฝรั่งเศส'
+  {
+    title: 'ภาษา-จีน',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/905872349617574/'
+  },
+  {
+    title: 'ภาษา-ญี่ปุ่น',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/906364582901684/'
+  },
+  {
+    title: 'ภาษา-เกาหลี',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/905213183016824/'
+  },
+  {
+    title: 'ภาษา-เยอรมัน',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/905248286346647/'
+  },
+  {
+    title: 'ภาษา-สเปน',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/905972899607519/'
+  },
+  {
+    title: 'ภาษา-ฝรั่งเศส',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/905914322946710/'
+  }
 ]
 
 const gifted = [
-  'โครงการพัฒนาศักยภาพทางคณิตศาสตร์',
-  'โครงการพัฒนาศักยภาพทางวิทยาศาสตร์',
-  'โครงการพัฒนาความสามารถพิเศษด้านภาษาไทย',
-  'โครงการพัฒนาศักยภาพด้านภาษาอังกฤษ'
+  {
+    title: 'โครงการพัฒนาศักยภาพทางคณิตศาสตร์',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/906317839573025/'
+  },
+  {
+    title: 'โครงการพัฒนาศักยภาพทางวิทยาศาสตร์',
+    link:
+      'https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/906954886175987/'
+  },
+  {
+    title: 'โครงการพัฒนาความสามารถพิเศษด้านภาษาไทย',
+    link: 'javascript:void();'
+  },
+  { title: 'โครงการพัฒนาศักยภาพด้านภาษาอังกฤษ', link: 'javascript:void();' }
 ]
 
 export const Programs = React.memo(props => {
@@ -46,7 +120,14 @@ export const Programs = React.memo(props => {
         <React.Fragment>
           <Col md={2}>
             {sciMathLang.map(content => (
-              <p key={content}>{content}</p>
+              <a
+                style={{ color: 'white' }}
+                key={content.title}
+                href={content.link}
+                target="_blank"
+              >
+                <p>{content.title}</p>
+              </a>
             ))}
           </Col>
           <Transition
@@ -62,18 +143,46 @@ export const Programs = React.memo(props => {
                 <animated.div style={props}>
                   <Col md={2}>
                     {sciMath.map(content => (
-                      <p key={content}>{content}</p>
-                    ))}{' '}
+                      <a
+                        style={{ color: 'white' }}
+                        di
+                        key={content.title}
+                        href={content.link}
+                        target="_blank"
+                      >
+                        <p>{content.title}</p>
+                      </a>
+                    ))}
                   </Col>
                   <Col md={1}>
                     {art.map(content => (
-                      <p key={content}>{content}</p>
+                      <a
+                        style={{ color: 'white' }}
+                        key={content.title}
+                        href={content.link}
+                        target="_blank"
+                      >
+                        <p>{content.title}</p>
+                      </a>
                     ))}
                   </Col>
                   <Col md={2}>
-                    <p>ภาษา - คณิตศาสตร์</p>
+                    <a
+                      style={{ color: 'white' }}
+                      href="https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/906424846228991/"
+                      target="_blank"
+                    >
+                      <p>ภาษา-คณิตศาสตร์</p>
+                    </a>{' '}
                     {gifted.map(content => (
-                      <p key={content}>{content}</p>
+                      <a
+                        style={{ color: 'white' }}
+                        key={content.title}
+                        href={content.link}
+                        target="_blank"
+                      >
+                        <p>{content.title}</p>
+                      </a>
                     ))}
                   </Col>
                 </animated.div>
@@ -88,23 +197,57 @@ export const Programs = React.memo(props => {
         <React.Fragment>
           <Col md={2}>
             {sciMathLang.map(content => (
-              <p key={content}>{content}</p>
+              <a
+                style={{ color: 'white' }}
+                key={content.title}
+                href={content.link}
+                target="_blank"
+              >
+                <p>{content.title}</p>
+              </a>
             ))}
           </Col>
           <Col md={2}>
             {sciMath.map(content => (
-              <p key={content}>{content}</p>
+              <a
+                style={{ color: 'white' }}
+                key={content.title}
+                href={content.link}
+                target="_blank"
+              >
+                <p>{content.title}</p>
+              </a>
             ))}
           </Col>
           <Col md={1}>
             {art.map(content => (
-              <p key={content}>{content}</p>
+              <a
+                style={{ color: 'white' }}
+                key={content.title}
+                href={content.link}
+                target="_blank"
+              >
+                <p>{content.title}</p>
+              </a>
             ))}
           </Col>
           <Col md={2}>
-            <p>ภาษา - คณิตศาสตร์</p>
+            <a
+              style={{ color: 'white' }}
+              href="https://www.facebook.com/TriamUdomOPH/photos/a.904838286387647/906424846228991/"
+              target="_blank"
+            >
+              <p>ภาษา-คณิตศาสตร์</p>
+            </a>{' '}
             {gifted.map(content => (
-              <p key={content}>{content}</p>
+              <a
+                style={{ color: 'white' }}
+                key={content.title}
+                href={content.link}
+                target="_blank"
+              >
+                <p>{content.title}</p>
+              </a>
             ))}
           </Col>
         </React.Fragment>

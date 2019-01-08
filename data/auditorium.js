@@ -24,7 +24,7 @@ export const Auditorium = [
     date: 'Fri, 11 Jan 2019',
     startTime: '13:20',
     endTime: '14:00',
-    name: 'Triam Udom Suksai Wing Symphony Orchestra Concert',
+    name: 'Triam Udom Suksa Wing Symphony Orchestra Concert',
     by: 'ชมรมดุริยางค์'
   },
   {

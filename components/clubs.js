@@ -13,7 +13,9 @@ export const Clubs = React.memo(props => {
       content = (
         <React.Fragment>
           <Col md={1}>
-            <p>คณิตศาสตร์</p>
+            <a style={{ color: 'white' }} href="" target="_blank">
+              <p>คณิตศาสตร์</p>
+            </a>
             <p>วิทยาศาสตร์</p>
             <p>สังคมศึกษา</p>
             <p>ภาษาไทย</p>
@@ -83,7 +85,9 @@ export const Clubs = React.memo(props => {
       content = (
         <React.Fragment>
           <Col md={1}>
-            <p>คณิตศาสตร์</p>
+            <a style={{ color: 'white' }} href="" target="_blank">
+              <p>คณิตศาสตร์</p>
+            </a>
             <p>วิทยาศาสตร์</p>
             <p>สังคมศึกษา</p>
             <p>ภาษาไทย</p>
