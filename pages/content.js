@@ -1,5 +1,4 @@
 import React from 'react'
-import { withRouter } from 'next/router'
 
 import Sci from '../content/02_sci.mdx'
 import Soc from '../content/03_soc.mdx'
@@ -31,98 +30,100 @@ import GM from '../content/59_gm.mdx'
 import 'bulma/css/bulma.min.css'
 import '../static/css/index.css'
 
-const Contents = ({ router }) => {
-  const { id } = router.query
-
-  let content
-  switch (id) {
-    case '2':
-      content = <Sci />
-      break
-    case '3':
-      content = <Soc />
-      break
-    case '4':
-      content = <Thai />
-      break
-    case '10':
-      content = <Wannasilp />
-      break
-    case '12':
-      content = <Music />
-      break
-    case '13':
-      content = <Art />
-      break
-    case '14':
-      content = <Marchingband />
-      break
-    case '16':
-      content = <Sport />
-      break
-    case '17':
-      content = <Bumpen />
-      break
-    case '18':
-      content = <TUMED />
-      break
-    case '24':
-      content = <Indy />
-      break
-    case '26':
-      content = <Chorus />
-      break
-    case '27':
-      content = <Law />
-      break
-    case '28':
-      content = <Book />
-      break
-    case '29':
-      content = <Cartoon />
-      break
-    case '35':
-      content = <Globe />
-      break
-    case '36':
-      content = <Entertainer />
-      break
-    case '41':
-      content = <SciGer />
-      break
-    case '43':
-      content = <SciEsp />
-      break
-    case '45':
-      content = <SciKor />
-      break
-    case '46':
-      content = <SciJap />
-      break
-    case '47':
-      content = <ArtMath />
-      break
-    case '48':
-      content = <ArtKor />
-      break
-    case '50':
-      content = <ArtChi />
-      break
-    case '58':
-      content = <GS />
-      break
-    case '59':
-      content = <GM />
-      break
+class Contents extends React.Component {
+  static getInitialProps({ query: { id } }) {
+    return { id }
   }
-
-  return (
-    <div className="container">
-      <div className="content" style={{ marginTop: '50px' }}>
-        <div className="box">{content}</div>
+  render() {
+    let content
+    switch (this.props.id) {
+      case '2':
+        content = <Sci />
+        break
+      case '3':
+        content = <Soc />
+        break
+      case '4':
+        content = <Thai />
+        break
+      case '10':
+        content = <Wannasilp />
+        break
+      case '12':
+        content = <Music />
+        break
+      case '13':
+        content = <Art />
+        break
+      case '14':
+        content = <Marchingband />
+        break
+      case '16':
+        content = <Sport />
+        break
+      case '17':
+        content = <Bumpen />
+        break
+      case '18':
+        content = <TUMED />
+        break
+      case '24':
+        content = <Indy />
+        break
+      case '26':
+        content = <Chorus />
+        break
+      case '27':
+        content = <Law />
+        break
+      case '28':
+        content = <Book />
+        break
+      case '29':
+        content = <Cartoon />
+        break
+      case '35':
+        content = <Globe />
+        break
+      case '36':
+        content = <Entertainer />
+        break
+      case '41':
+        content = <SciGer />
+        break
+      case '43':
+        content = <SciEsp />
+        break
+      case '45':
+        content = <SciKor />
+        break
+      case '46':
+        content = <SciJap />
+        break
+      case '47':
+        content = <ArtMath />
+        break
+      case '48':
+        content = <ArtKor />
+        break
+      case '50':
+        content = <ArtChi />
+        break
+      case '58':
+        content = <GS />
+        break
+      case '59':
+        content = <GM />
+        break
+    }
+    return (
+      <div className="container">
+        <div className="content" style={{ marginTop: '50px' }}>
+          <div className="box">{content}</div>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
-export default withRouter(Contents)
+export default Contents
