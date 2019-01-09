@@ -5,6 +5,213 @@ import { Transition, animated, config } from 'react-spring'
 import { TypographicContext } from './design'
 import { MOBILE } from './design/withViewType'
 
+const ClubsFragment1 = () => (
+  <React.Fragment>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>คณิตศาสตร์</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=2"
+      target="_blank"
+    >
+      <p>วิทยาศาสตร์</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=3"
+      target="_blank"
+    >
+      <p>สังคมศึกษา</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=4"
+      target="_blank"
+    >
+      <p>ภาษาไทย</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>ภาษาอังกฤษ</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>ห้องสมุด</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>ศาสนาและวัฒนธรรม</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>นาฎศิลป์</p>
+    </a>
+  </React.Fragment>
+)
+
+const ClubsFragment2 = () => (
+  <React.Fragment>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>วาทศิลป์</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=10"
+      target="_blank"
+    >
+      <p>วรรณศิลป์ ต.อ.</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>ดนตรีไทย</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=12"
+      target="_blank"
+    >
+      <p>ดนตรีสากล</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=13"
+      target="_blank"
+    >
+      <p>ศิลปศึกษา</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=14"
+      target="_blank"
+    >
+      <p>ดุริยางค์</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>เพื่อนที่ปรึกษา</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=16"
+      target="_blank"
+    >
+      <p>นันทนาการกีฬา</p>
+    </a>
+  </React.Fragment>
+)
+
+const ClubsFragment3 = () => (
+  <React.Fragment>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=17"
+      target="_blank"
+    >
+      <p>ผู้บำเพ็ญประโยชน์</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=18"
+      target="_blank"
+    >
+      <p>ผู้นำเยาวชนสาธารณสุข</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>อนุรักษ์ธรรมชาติ ฯ</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>เพาะพันธุ์ไม้</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>ครอสเวิร์ด</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>คอมพิวเตอร์</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>ถ่ายภาพ</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=24"
+      target="_blank"
+    >
+      <p>สิ่งละอันพันละน้อย</p>
+    </a>
+  </React.Fragment>
+)
+
+const ClubsFragment4 = () => (
+  <React.Fragment>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>ค้นพบตนเอง</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=26"
+      target="_blank"
+    >
+      <p>ขับร้องและประสานเสียง</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=27"
+      target="_blank"
+    >
+      <p>กฎหมายน่ารู้</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=28"
+      target="_blank"
+    >
+      <p>สร้างสรรค์หนังสือ</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=29"
+      target="_blank"
+    >
+      <p>การ์ตูน</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>นิเทศศิลป</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>พัฒนาศักยภาพทางวิทยาศาสตร์</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>ของเล่นเพื่อการเรียนรู้</p>
+    </a>
+  </React.Fragment>
+)
+
+const ClubsFragment5 = () => (
+  <React.Fragment>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>ภาพยนตร์สั้นและสื่อโทรทัศน์</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>เศรษฐศาสตร์</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=35"
+      target="_blank"
+    >
+      <p>โลกทั้งระบบ</p>
+    </a>
+    <a
+      style={{ color: 'white' }}
+      href="https://openhouse.triamudom.ac.th/content?id=36"
+      target="_blank"
+    >
+      <p>สันทนากร</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>โลกศาสตร์</p>
+    </a>
+    <a style={{ color: 'white' }} href="javascript:void()" target="_blank">
+      <p>สีสรรพ์ภาษาต่างประเทศที่ 2</p>
+    </a>
+  </React.Fragment>
+)
+
 export const Clubs = React.memo(props => {
   const { collapseStatus, handleCCollapse, handleCExpand, viewType } = props
   let content
@@ -13,62 +220,7 @@ export const Clubs = React.memo(props => {
       content = (
         <React.Fragment>
           <Col md={1}>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>คณิตศาสตร์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=2"
-              target="_blank"
-            >
-              <p>วิทยาศาสตร์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=3"
-              target="_blank"
-            >
-              <p>สังคมศึกษา</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=4"
-              target="_blank"
-            >
-              <p>ภาษาไทย</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ภาษาอังกฤษ</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ห้องสมุด</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ศาสนาและวัฒนธรรม</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>นาฎศิลป์</p>
-            </a>
+            <ClubsFragment1 />
           </Col>
           <Transition
             items={!collapseStatus}
@@ -83,222 +235,16 @@ export const Clubs = React.memo(props => {
               (props => (
                 <animated.div style={props}>
                   <Col md={1}>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>วาทศิลป์</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=10"
-                      target="_blank"
-                    >
-                      <p>วรรณศิลป์ ต.อ.</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>ดนตรีไทย</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=12"
-                      target="_blank"
-                    >
-                      <p>ดนตรีสากล</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=13"
-                      target="_blank"
-                    >
-                      <p>ศิลปศึกษา</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=14"
-                      target="_blank"
-                    >
-                      <p>ดุริยางค์</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>เพื่อนที่ปรึกษา</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=16"
-                      target="_blank"
-                    >
-                      <p>นันทนาการกีฬา</p>
-                    </a>
+                    <ClubsFragment2 />
                   </Col>
                   <Col md={1}>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=17"
-                      target="_blank"
-                    >
-                      <p>ผู้บำเพ็ญประโยชน์</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=18"
-                      target="_blank"
-                    >
-                      <p>ผู้นำเยาวชนสาธารณสุข</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>อนุรักษ์ธรรมชาติ ฯ</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>เพาะพันธุ์ไม้</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>ครอสเวิร์ด</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>คอมพิวเตอร์</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>ถ่ายภาพ</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=24"
-                      target="_blank"
-                    >
-                      <p>สิ่งละอันพันละน้อย</p>
-                    </a>
+                    <ClubsFragment3 />
                   </Col>
                   <Col md={2}>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>ค้นพบตนเอง</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=26"
-                      target="_blank"
-                    >
-                      <p>ขับร้องและประสานเสียง</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=27"
-                      target="_blank"
-                    >
-                      <p>กฎหมายน่ารู้</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=28"
-                      target="_blank"
-                    >
-                      <p>สร้างสรรค์หนังสือ</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=29"
-                      target="_blank"
-                    >
-                      <p>การ์ตูน</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>นิเทศศิลป</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>พัฒนาศักยภาพทางวิทยาศาสตร์</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>ของเล่นเพื่อการเรียนรู้</p>
-                    </a>
+                    <ClubsFragment4 />
                   </Col>
                   <Col md={2}>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>ภาพยนตร์สั้นและสื่อโทรทัศน์</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>เศรษฐศาสตร์</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=35"
-                      target="_blank"
-                    >
-                      <p>โลกทั้งระบบ</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="https://openhouse.triamudom.ac.th/content?id=36"
-                      target="_blank"
-                    >
-                      <p>สันทนากร</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>โลกศาสตร์</p>
-                    </a>
-                    <a
-                      style={{ color: 'white' }}
-                      href="javascript:void()"
-                      target="_blank"
-                    >
-                      <p>สีสรรพ์ภาษาต่างประเทศที่ 2</p>
-                    </a>
+                    <ClubsFragment5 />
                   </Col>
                 </animated.div>
               ))
@@ -311,334 +257,19 @@ export const Clubs = React.memo(props => {
       content = (
         <React.Fragment>
           <Col md={1}>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>คณิตศาสตร์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=2"
-              target="_blank"
-            >
-              <p>วิทยาศาสตร์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=3"
-              target="_blank"
-            >
-              <p>สังคมศึกษา</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=4"
-              target="_blank"
-            >
-              <p>ภาษาไทย</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ภาษาอังกฤษ</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ห้องสมุด</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ศาสนาและวัฒนธรรม</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>นาฎศิลป์</p>
-            </a>
+            <ClubsFragment1 />
           </Col>
           <Col md={1}>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>วาทศิลป์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=10"
-              target="_blank"
-            >
-              <p>วรรณศิลป์ ต.อ.</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ดนตรีไทย</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=12"
-              target="_blank"
-            >
-              <p>ดนตรีสากล</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=13"
-              target="_blank"
-            >
-              <p>ศิลปศึกษา</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=14"
-              target="_blank"
-            >
-              <p>ดุริยางค์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>เพื่อนที่ปรึกษา</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=16"
-              target="_blank"
-            >
-              <p>นันทนาการกีฬา</p>
-            </a>
-          </Col>
-          <Col md={1}>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=17"
-              target="_blank"
-            >
-              <p>ผู้บำเพ็ญประโยชน์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=18"
-              target="_blank"
-            >
-              <p>ผู้นำเยาวชนสาธารณสุข</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>อนุรักษ์ธรรมชาติ ฯ</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>เพาะพันธุ์ไม้</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ครอสเวิร์ด</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>คอมพิวเตอร์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ถ่ายภาพ</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=24"
-              target="_blank"
-            >
-              <p>สิ่งละอันพันละน้อย</p>
-            </a>
+            <ClubsFragment2 />
           </Col>
           <Col md={2}>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=17"
-              target="_blank"
-            >
-              <p>ผู้บำเพ็ญประโยชน์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=18"
-              target="_blank"
-            >
-              <p>ผู้นำเยาวชนสาธารณสุข</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>อนุรักษ์ธรรมชาติ ฯ</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>เพาะพันธุ์ไม้</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ครอสเวิร์ด</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>คอมพิวเตอร์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ถ่ายภาพ</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=24"
-              target="_blank"
-            >
-              <p>สิ่งละอันพันละน้อย</p>
-            </a>
+            <ClubsFragment3 />
           </Col>
           <Col md={2}>
-            <a style={{ color: 'white' }} href="" target="_blank">
-              <p>ค้นพบตนเอง</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=26"
-              target="_blank"
-            >
-              <p>ขับร้องและประสานเสียง</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=27"
-              target="_blank"
-            >
-              <p>กฎหมายน่ารู้</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=28"
-              target="_blank"
-            >
-              <p>สร้างสรรค์หนังสือ</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=29"
-              target="_blank"
-            >
-              <p>การ์ตูน</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>นิเทศศิลป</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>พัฒนาศักยภาพทางวิทยาศาสตร์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ของเล่นเพื่อการเรียนรู้</p>
-            </a>
+            <ClubsFragment4 />
           </Col>
           <Col md={2}>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>ภาพยนตร์สั้นและสื่อโทรทัศน์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>เศรษฐศาสตร์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=35"
-              target="_blank"
-            >
-              <p>โลกทั้งระบบ</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="https://openhouse.triamudom.ac.th/content?id=36"
-              target="_blank"
-            >
-              <p>สันทนากร</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>โลกศาสตร์</p>
-            </a>
-            <a
-              style={{ color: 'white' }}
-              href="javascript:void()"
-              target="_blank"
-            >
-              <p>สีสรรพ์ภาษาต่างประเทศที่ 2</p>
-            </a>
+            <ClubsFragment5 />
           </Col>
         </React.Fragment>
       )
