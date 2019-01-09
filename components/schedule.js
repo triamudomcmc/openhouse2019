@@ -99,7 +99,7 @@ export class Schedule extends React.PureComponent {
                     {Auditorium.filter(
                       data => data.date === 'Fri, 11 Jan 2019'
                     ).map(data => (
-                      <tr>
+                      <tr key={data.name}>
                         <td>{`${data.startTime}-${data.endTime}`}</td>
                         <td>{data.name}</td>
                         <td>{data.by}</td>
@@ -123,7 +123,7 @@ export class Schedule extends React.PureComponent {
                     {Auditorium.filter(
                       data => data.date === 'Sat, 12 Jan 2019'
                     ).map(data => (
-                      <tr>
+                      <tr key={data.name}>
                         <td>{`${data.startTime}-${data.endTime}`}</td>
                         <td>{data.name}</td>
                         <td>{data.by}</td>
@@ -134,7 +134,7 @@ export class Schedule extends React.PureComponent {
               </div>
             </div>
             <button
-              class="modal-close is-large"
+              className="modal-close is-large"
               aria-label="close"
               onClick={() => this.setState({ isAuditoriumOpen: false })}
             />
@@ -165,7 +165,7 @@ export class Schedule extends React.PureComponent {
                     {larn70
                       .filter(data => data.date === 'Fri, 11 Jan 2019')
                       .map(data => (
-                        <tr>
+                        <tr key={data.name}>
                           <td>{`${data.startTime}-${data.endTime}`}</td>
                           <td>{data.name}</td>
                           <td>{data.by}</td>
@@ -189,7 +189,7 @@ export class Schedule extends React.PureComponent {
                     {larn70
                       .filter(data => data.date === 'Sat, 12 Jan 2019')
                       .map(data => (
-                        <tr>
+                        <tr key={data.name}>
                           <td>{`${data.startTime}-${data.endTime}`}</td>
                           <td>{data.name}</td>
                           <td>{data.by}</td>
@@ -200,7 +200,7 @@ export class Schedule extends React.PureComponent {
               </div>
             </div>
             <button
-              class="modal-close is-large"
+              className="modal-close is-large"
               aria-label="close"
               onClick={() => this.setState({ isLarn70Open: false })}
             />

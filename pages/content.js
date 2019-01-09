@@ -26,6 +26,10 @@ import ArtKor from '../content/48_artkor.mdx'
 import ArtChi from '../content/50_artchi.mdx'
 import GS from '../content/58_gs.mdx'
 import GM from '../content/59_gm.mdx'
+import Math2 from '../content/61_math.mdx'
+import Sci2 from '../content/62_sci.mdx'
+import Soc2 from '../content/65_soc.mdx'
+import Lang2 from '../content/69_lang.mdx'
 
 import 'bulma/css/bulma.min.css'
 import '../static/css/index.css'
@@ -126,6 +130,18 @@ class Contents extends React.Component {
       case '59':
         content = <GM />
         break
+      case '61':
+        content = <Math2 />
+        break
+      case '62':
+        content = <Sci2 />
+        break
+      case '65':
+        content = <Soc2 />
+        break
+      case '69':
+        content = <Lang2 />
+        breK
     }
 
     return (

@@ -34,10 +34,10 @@ export const Title = React.memo(props => (
               </TypographicContext>
               <button
                 className="nes-btn is-success title-button"
-                onClick={scrollToContent}
+                onClick={scrollToReg}
                 style={{ marginTop: '50px' }}
               >
-                START!
+                Register!
               </button>
             </div>
           ) : (
@@ -50,14 +50,14 @@ export const Title = React.memo(props => (
                     <p style={{ fontSize: fontSize(2) }}>
                       นิทรรศการ 81 ปี เตรียมอุดมศึกษาก้าวหน้าสู่อนาคต
                     </p>
-                    <p style={{ fontSize: fontSize(1) }}>11-12 มกราคม 2562</p>
+                    <p style={{ fontSize: fontSize(0) }}>11-12 มกราคม 2562</p>
                   </TypographicContext>
                   <button
                     className="nes-btn is-success title-button"
-                    onClick={scrollToContent}
+                    onClick={scrollToReg}
                     style={{ marginTop: '50px' }}
                   >
-                    START!
+                    Register!
                   </button>
                 </animated.div>
               )}
@@ -69,8 +69,8 @@ export const Title = React.memo(props => (
   </section>
 ))
 
-const scrollToContent = () => {
+const scrollToReg = () => {
   document
-    .getElementById('programs')
+    .getElementById('register')
     .scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
