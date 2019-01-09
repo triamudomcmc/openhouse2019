@@ -311,7 +311,11 @@ export const Clubs = React.memo(props => {
       content = (
         <React.Fragment>
           <Col md={1}>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>คณิตศาสตร์</p>
             </a>
             <a
@@ -335,21 +339,41 @@ export const Clubs = React.memo(props => {
             >
               <p>ภาษาไทย</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>ภาษาอังกฤษ</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>ห้องสมุด</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>ศาสนาและวัฒนธรรม</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>นาฎศิลป์</p>
             </a>
           </Col>
           <Col md={1}>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>วาทศิลป์</p>
             </a>
             <a
@@ -359,7 +383,11 @@ export const Clubs = React.memo(props => {
             >
               <p>วรรณศิลป์ ต.อ.</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>ดนตรีไทย</p>
             </a>
             <a
@@ -383,7 +411,11 @@ export const Clubs = React.memo(props => {
             >
               <p>ดุริยางค์</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>เพื่อนที่ปรึกษา</p>
             </a>
             <a
@@ -395,28 +427,60 @@ export const Clubs = React.memo(props => {
             </a>
           </Col>
           <Col md={1}>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="https://openhouse.triamudom.ac.th/content?id=17"
+              target="_blank"
+            >
               <p>ผู้บำเพ็ญประโยชน์</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="https://openhouse.triamudom.ac.th/content?id=18"
+              target="_blank"
+            >
               <p>ผู้นำเยาวชนสาธารณสุข</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>อนุรักษ์ธรรมชาติ ฯ</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>เพาะพันธุ์ไม้</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>ครอสเวิร์ด</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>คอมพิวเตอร์</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>ถ่ายภาพ</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="https://openhouse.triamudom.ac.th/content?id=24"
+              target="_blank"
+            >
               <p>สิ่งละอันพันละน้อย</p>
             </a>
           </Col>
@@ -435,19 +499,39 @@ export const Clubs = React.memo(props => {
             >
               <p>ผู้นำเยาวชนสาธารณสุข</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>อนุรักษ์ธรรมชาติ ฯ</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>เพาะพันธุ์ไม้</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>ครอสเวิร์ด</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>คอมพิวเตอร์</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>ถ่ายภาพ</p>
             </a>
             <a
@@ -490,21 +574,41 @@ export const Clubs = React.memo(props => {
             >
               <p>การ์ตูน</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>นิเทศศิลป</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>พัฒนาศักยภาพทางวิทยาศาสตร์</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>ของเล่นเพื่อการเรียนรู้</p>
             </a>
           </Col>
           <Col md={2}>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>ภาพยนตร์สั้นและสื่อโทรทัศน์</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>เศรษฐศาสตร์</p>
             </a>
             <a
@@ -521,10 +625,18 @@ export const Clubs = React.memo(props => {
             >
               <p>สันทนากร</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>โลกศาสตร์</p>
             </a>
-            <a style={{ color: 'white' }} href="" target="_blank">
+            <a
+              style={{ color: 'white' }}
+              href="javascript:void()"
+              target="_blank"
+            >
               <p>สีสรรพ์ภาษาต่างประเทศที่ 2</p>
             </a>
           </Col>
