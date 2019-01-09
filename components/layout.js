@@ -5,7 +5,7 @@ import { GlobalStyle, TypographicContext } from '../components/design'
 import { GA_TRACKING_ID } from '../lib/gtag'
 import { Favicon, Social } from '../components/meta'
 
-const Analytics = React.memo(() => (
+export const Analytics = React.memo(() => (
   <React.Fragment>
     <script
       async

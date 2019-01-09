@@ -301,15 +301,12 @@ export class Register extends React.PureComponent {
 
   render() {
     return (
-      <section className="section">
+      <section className="section" id="register">
         <div className="container">
           <Parent>
             <Box title="Register">
               {this.state.key === '' ? (
-                <RegForm
-                  submitToFirebase={this.submitToFirebase}
-                  handleDropdown={this.handleDropdown}
-                />
+                <RegForm submitToFirebase={this.submitToFirebase} />
               ) : (
                 <div>
                   <TypographicContext>
