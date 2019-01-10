@@ -9,6 +9,7 @@ import { Contest } from '../components/contest'
 import { Schedule } from '../components/schedule'
 import { Register } from '../components/register'
 import { Direction } from '../components/direction'
+import { Map } from '../components/map'
 
 import 'bulma/css/bulma.min.css'
 import '../static/css/nes.css'
@@ -21,6 +22,7 @@ const Index = React.memo(props => {
     <Layout>
       <Title viewType={viewType} />
       <Booth viewType={viewType} />
+      <Map />
       <Contest />
       <Schedule />
       <Direction />

@@ -141,7 +141,7 @@ class Contents extends React.Component {
         break
       case '69':
         content = <Lang2 />
-        breK
+        break
     }
 
     return (
