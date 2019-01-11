@@ -313,13 +313,13 @@ export class Register extends React.PureComponent {
                   </TypographicContext>
                   <QRCode value={this.state.key} />
                   <br />
-                  {/* <button
+                  <button
                     onClick={this.downloadQRCode}
                     className="nes-btn is-success"
                     style={{ marginTop: '25px' }}
                   >
                     Download QRCode
-                  </button> */}
+                  </button>
 
                   <TypographicContext>
                     <a
