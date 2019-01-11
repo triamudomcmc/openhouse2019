@@ -3,6 +3,7 @@ import React from 'react'
 import QRCode from '../lib/qr'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
+import { saveAs } from 'file-saver'
 
 import { api } from '../lib/api'
 
@@ -285,18 +286,14 @@ export class Register extends React.PureComponent {
   }
 
   downloadQRCode = async () => {
-    const link = document.createElement('a')
     const blob = await new Promise((res, rej) => {
       const canvas = document.getElementById('qrcanvas')
       canvas.toBlob(bl => {
         res(bl)
       })
     })
-    link.href = URL.createObjectURL(blob)
-    link.download = 'OpenHouseQR.png'
-    link.dispatchEvent(
-      new MouseEvent(`click`, { bubbles: true, cancelable: true, view: window })
-    )
+
+    saveAs(blob, 'QR.png')
   }
 
   render() {
