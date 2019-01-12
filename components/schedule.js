@@ -25,7 +25,10 @@ export class Schedule extends React.PureComponent {
     const UNIXminDate = new Date(`${data.date} ${data.startTime}:00 GMT+7`)
     const UNIXmaxDate = new Date(`${data.date} ${data.endTime}:00 GMT+7`)
 
-    if (UNIXcurrentDate > UNIXminDate && UNIXcurrentDate < UNIXmaxDate) {
+    if (
+      UNIXcurrentDate + 2400000 > UNIXminDate &&
+      UNIXcurrentDate + 2400000 < UNIXmaxDate
+    ) {
       return true
     } else {
       return false
