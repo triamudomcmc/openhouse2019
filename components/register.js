@@ -311,15 +311,15 @@ export class Register extends React.PureComponent {
                       โปรดเก็บ QR Code ไว้ยืนยันตัวตนหน้างาน
                     </p>
                   </TypographicContext>
-                  <QRCode value={this.state.key} />
+                  <QRCode value={this.state.key} level="H" />
                   <br />
-                  {/* <button
+                  <button
                     onClick={this.downloadQRCode}
                     className="nes-btn is-success"
                     style={{ marginTop: '25px' }}
                   >
                     Download QRCode
-                  </button> */}
+                  </button>
 
                   <TypographicContext>
                     <a
